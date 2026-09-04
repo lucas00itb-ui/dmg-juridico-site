@@ -46,3 +46,20 @@ if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-mot
 } else {
   revealItems.forEach((item) => item.classList.add('visible'));
 }
+
+const officeValues = document.querySelectorAll('.office-value');
+if (officeValues.length) {
+  const activateOfficeValue = (current) => {
+    officeValues.forEach((item) => item.classList.toggle('is-active', item === current));
+  };
+
+  officeValues.forEach((item) => {
+    item.addEventListener('click', () => activateOfficeValue(item));
+    item.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        activateOfficeValue(item);
+      }
+    });
+  });
+}
