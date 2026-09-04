@@ -1,0 +1,136 @@
+/* Ajustes finais solicitados em 04/09/2026 */
+
+/* 1) Áreas de atuação — cards mais compactos */
+.practice-card{
+  min-height:255px !important;
+  padding:22px 28px 24px !important;
+}
+.practice-card h3{
+  margin:36px 0 13px !important;
+  font-size:clamp(2rem,2.85vw,3.15rem) !important;
+  line-height:1.02 !important;
+}
+.practice-card p{
+  margin:0 !important;
+  max-width:560px !important;
+  font-size:1.055rem !important;
+  line-height:1.68 !important;
+  color:#404541 !important;
+}
+.practice-icon{
+  width:34px !important;
+  height:34px !important;
+  font-size:.88rem !important;
+}
+.practice-top span{
+  font-size:.7rem !important;
+}
+
+/* 2) Remove o contador 01 / 04 do bloco Nosso compromisso */
+.aside-index{
+  display:none !important;
+}
+.hero-aside{
+  justify-content:center !important;
+  gap:42px !important;
+}
+
+/* 3) Textos explicativos — maiores, mais fortes e com contraste melhor */
+.hero-intro,
+.section-heading > p,
+.practice-card p,
+.client-copy p,
+.client-access p,
+.contact-copy > p:last-of-type,
+.page-hero .page-lead,
+.office-copy,
+.team-heading p,
+.team-info p,
+.location-head p,
+.licitapara-copy p,
+.lp-intro p,
+.lp-feature p,
+.lp-legal-copy p{
+  font-size:1.055rem !important;
+  line-height:1.72 !important;
+}
+
+/* Em fundos claros: cinza realmente escuro */
+.section-light .section-heading > p,
+.practice-card p,
+.office-copy,
+.office-copy p,
+.office-value small,
+.licitapara-copy p,
+.location-head p,
+.lp-intro p,
+.lp-feature p,
+.lp-legal-copy p{
+  color:#3f433f !important;
+}
+
+/* Blocos menores de explicação também ganham leitura */
+.office-value small{
+  font-size:.87rem !important;
+  line-height:1.55 !important;
+}
+
+/* Em fundos escuros: mais presença, sem ficar apagado */
+.hero-intro,
+.client-copy p,
+.client-access p,
+.contact-copy > p:last-of-type,
+.page-hero .page-lead,
+.team-heading p,
+.team-info p{
+  color:#d2d0c8 !important;
+}
+
+/* Mantém informações secundárias legíveis */
+.aside-meta span,
+.contact-row small,
+.location-card p{
+  font-size:.94rem !important;
+  line-height:1.58 !important;
+}
+
+@media(max-width:920px){
+  .practice-card{
+    min-height:230px !important;
+    padding:21px 23px 22px !important;
+  }
+  .practice-card h3{
+    margin:30px 0 12px !important;
+  }
+}
+
+@media(max-width:520px){
+  .practice-card{
+    min-height:210px !important;
+    padding:19px 20px 21px !important;
+  }
+  .practice-card h3{
+    margin:26px 0 11px !important;
+    font-size:clamp(1.9rem,9vw,2.65rem) !important;
+  }
+  .practice-card p{
+    font-size:1rem !important;
+    line-height:1.62 !important;
+  }
+  .hero-intro,
+  .section-heading > p,
+  .client-copy p,
+  .client-access p,
+  .contact-copy > p:last-of-type,
+  .page-hero .page-lead,
+  .office-copy,
+  .team-heading p,
+  .team-info p,
+  .location-head p,
+  .licitapara-copy p,
+  .lp-intro p,
+  .lp-feature p,
+  .lp-legal-copy p{
+    font-size:1rem !important;
+  }
+}
