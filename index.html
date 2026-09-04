@@ -11,6 +11,46 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/refinements.css">
+  <style>
+    /* LicitaPará — correção aplicada diretamente na HOME */
+    .licitapara-section .lp-signature{
+      display:flex!important;
+      align-items:center!important;
+      justify-content:center!important;
+      width:clamp(320px,27vw,410px)!important;
+      max-width:100%!important;
+      min-width:0!important;
+      height:auto!important;
+      padding:14px 16px!important;
+      margin:0!important;
+      background:#004b3e!important;
+      border:1px solid rgba(212,173,92,.62)!important;
+      box-shadow:0 18px 42px rgba(13,63,53,.18)!important;
+      overflow:hidden!important;
+      color:inherit!important;
+      font-size:inherit!important;
+      line-height:normal!important;
+    }
+    .licitapara-section .lp-signature img{
+      display:block!important;
+      width:100%!important;
+      height:auto!important;
+      object-fit:contain!important;
+    }
+    .licitapara-section .lp-signature>span,
+    .licitapara-section .lp-signature>i{display:none!important}
+    .licitapara-grid{
+      grid-template-columns:minmax(330px,.78fr) minmax(440px,1.12fr) minmax(220px,.56fr)!important;
+      gap:clamp(38px,5vw,72px)!important;
+    }
+    @media(max-width:920px){
+      .licitapara-grid{grid-template-columns:1fr!important}
+      .licitapara-section .lp-signature{width:min(100%,460px)!important}
+    }
+    @media(max-width:520px){
+      .licitapara-section .lp-signature{width:100%!important;padding:10px 12px!important}
+    }
+  </style>
   <title>DMG | Advogados Associados — Advocacia no Norte do Brasil</title>
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
@@ -35,7 +75,7 @@
       "addressCountry":"BR"
     },
     "description":"Advocacia responsável e estratégica no Norte do Brasil, com atuação nas áreas Cível, Trabalhista, Administrativa e em Licitações.",
-    "sameAs":["https://www.instagram.com/dmgjuridico/","https://licitapara.com.br"]
+    "sameAs":["https://www.instagram.com/dmgjuridico/","https://www.licitapara.com.br/"]
   }
   </script>
 </head>
@@ -53,9 +93,9 @@
         <a href="#inicio">Início</a>
         <a href="quem-somos/">Quem somos</a>
         <a href="#atuacao">Áreas de atuação</a>
-        <a class="external-nav" href="https://licitapara.com.br" target="_blank" rel="noopener noreferrer">LicitaPará</a>
-        <a href="area-do-cliente/" target="_blank" rel="noopener">Área do cliente</a>
         <a href="#contato">Contato</a>
+        <a class="external-nav" href="licitapara/">LicitaPará</a>
+        <a href="area-do-cliente/" target="_blank" rel="noopener">Área do cliente</a>
       </nav>
 
       <div class="header-actions">
@@ -112,65 +152,39 @@
 
     <section class="principles-section" aria-label="Forma de atuação">
       <div class="principles-wrap">
-        <article class="principle reveal">
-          <small>01</small>
-          <div><h2>Estratégia Jurídica</h2><p>Planejamento da solução mais adequada para cada caso.</p></div>
-        </article>
-        <article class="principle reveal">
-          <small>02</small>
-          <div><h2>Segurança Jurídica</h2><p>Prevenção de riscos e atuação técnica responsável.</p></div>
-        </article>
-        <article class="principle reveal">
-          <small>03</small>
-          <div><h2>Atuação Personalizada</h2><p>Análise das particularidades de cada demanda.</p></div>
-        </article>
-        <article class="principle reveal">
-          <small>04</small>
-          <div><h2>Acompanhamento</h2><p>Comunicação próxima e orientação objetiva em cada etapa.</p></div>
-        </article>
+        <article class="principle reveal"><small>01</small><div><h2>Estratégia Jurídica</h2><p>Planejamento da solução mais adequada para cada caso.</p></div></article>
+        <article class="principle reveal"><small>02</small><div><h2>Segurança Jurídica</h2><p>Prevenção de riscos e atuação técnica responsável.</p></div></article>
+        <article class="principle reveal"><small>03</small><div><h2>Atuação Personalizada</h2><p>Análise das particularidades de cada demanda.</p></div></article>
+        <article class="principle reveal"><small>04</small><div><h2>Acompanhamento</h2><p>Comunicação próxima e orientação objetiva em cada etapa.</p></div></article>
       </div>
     </section>
 
     <section class="section section-light" id="atuacao" aria-labelledby="atuacao-title">
       <div class="container">
         <div class="section-heading reveal">
-          <div>
-            <p class="eyebrow">Áreas de atuação</p>
-            <h2 id="atuacao-title">Direção técnica para questões complexas.</h2>
-          </div>
+          <div><p class="eyebrow">Áreas de atuação</p><h2 id="atuacao-title">Direção técnica para questões complexas.</h2></div>
           <p>Cada demanda começa com uma leitura criteriosa dos fatos. A partir dela, construímos uma atuação compatível com o contexto, os riscos e os objetivos do cliente.</p>
         </div>
-
         <div class="practice-grid">
-          <article class="practice-card reveal">
-            <div class="practice-top"><span>01</span><div class="practice-icon" aria-hidden="true">§</div></div>
-            <div><h3>Cível</h3><p>Contratos, obrigações, responsabilidade civil, relações de consumo e condução estratégica de demandas judiciais.</p></div>
-          </article>
-          <article class="practice-card reveal">
-            <div class="practice-top"><span>02</span><div class="practice-icon" aria-hidden="true">◇</div></div>
-            <div><h3>Trabalhista</h3><p>Orientação preventiva e atuação em conflitos trabalhistas, com análise técnica e atendimento próximo.</p></div>
-          </article>
-          <article class="practice-card reveal">
-            <div class="practice-top"><span>03</span><div class="practice-icon" aria-hidden="true">▥</div></div>
-            <div><h3>Administrativa</h3><p>Direito Público, servidores, relações com a Administração, questões ambientais e demandas perante a Fazenda Pública.</p></div>
-          </article>
-          <article class="practice-card reveal">
-            <div class="practice-top"><span>04</span><div class="practice-icon" aria-hidden="true">↗</div></div>
-            <div><h3>Licitações</h3><p>Análise de editais, impugnações, recursos, contratos administrativos, medidas judiciais e atuação perante órgãos de controle.</p></div>
-          </article>
+          <article class="practice-card reveal"><div class="practice-top"><span>01</span><div class="practice-icon" aria-hidden="true">§</div></div><div><h3>Cível</h3><p>Contratos, obrigações, responsabilidade civil, relações de consumo e condução estratégica de demandas judiciais.</p></div></article>
+          <article class="practice-card reveal"><div class="practice-top"><span>02</span><div class="practice-icon" aria-hidden="true">◇</div></div><div><h3>Trabalhista</h3><p>Orientação preventiva e atuação em conflitos trabalhistas, com análise técnica e atendimento próximo.</p></div></article>
+          <article class="practice-card reveal"><div class="practice-top"><span>03</span><div class="practice-icon" aria-hidden="true">▥</div></div><div><h3>Administrativa</h3><p>Direito Público, servidores, relações com a Administração, questões ambientais e demandas perante a Fazenda Pública.</p></div></article>
+          <article class="practice-card reveal"><div class="practice-top"><span>04</span><div class="practice-icon" aria-hidden="true">↗</div></div><div><h3>Licitações</h3><p>Análise de editais, impugnações, recursos, contratos administrativos, medidas judiciais e atuação perante órgãos de controle.</p></div></article>
         </div>
       </div>
     </section>
 
     <section class="licitapara-section" id="licitapara" aria-labelledby="licitapara-title">
       <div class="container licitapara-grid">
-        <div class="lp-signature reveal reveal-left" aria-hidden="true"><span>LP</span><i></i><span>DMG</span></div>
+        <div class="lp-signature reveal reveal-left">
+          <img src="assets/images/licitapara-logo.svg" alt="LicitaPará — Inteligência em Licitações" width="410" height="103">
+        </div>
         <div class="licitapara-copy reveal">
           <p class="eyebrow">Licitações e contratos públicos</p>
           <h2 id="licitapara-title">O jurídico responsável pelo <em>LicitaPará.</em></h2>
           <p>A DMG | Advogados Associados atua como equipe jurídica responsável pelo LicitaPará, com suporte em impugnações, recursos, ações judiciais, contratos administrativos e matérias perante órgãos de controle.</p>
         </div>
-        <a class="licitapara-link reveal reveal-right" href="https://licitapara.com.br" target="_blank" rel="noopener noreferrer" aria-label="Conhecer o LicitaPará">
+        <a class="licitapara-link reveal reveal-right" href="licitapara/" aria-label="Conhecer a atuação da DMG no LicitaPará">
           <span class="lp-icon" aria-hidden="true">◇</span>
           <span>Conhecer a atuação no LicitaPará</span>
           <span class="lp-arrow" aria-hidden="true">↗</span>
@@ -199,23 +213,12 @@
           <p class="eyebrow">Atendimento e canais oficiais</p>
           <h2 id="contato-title">Um só lugar para falar com a DMG.</h2>
           <p>Atendimento, redes sociais e endereço físico reunidos em uma área direta, sem repetir informações ao longo do site.</p>
-          <div class="contact-cta">
-            <a class="button button-accent" href="https://wa.me/5592994986742?text=Ol%C3%A1%2C%20equipe%20DMG%20Jur%C3%ADdico.%20Gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20inicial%20sobre%20uma%20quest%C3%A3o%20jur%C3%ADdica." target="_blank" rel="noopener noreferrer">Iniciar conversa no WhatsApp <span aria-hidden="true">↗</span></a>
-          </div>
+          <div class="contact-cta"><a class="button button-accent" href="https://wa.me/5592994986742?text=Ol%C3%A1%2C%20equipe%20DMG%20Jur%C3%ADdico.%20Gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20inicial%20sobre%20uma%20quest%C3%A3o%20jur%C3%ADdica." target="_blank" rel="noopener noreferrer">Iniciar conversa no WhatsApp <span aria-hidden="true">↗</span></a></div>
         </div>
-
         <div class="contact-list reveal reveal-right">
-          <a class="contact-row" href="https://wa.me/5592994986742" target="_blank" rel="noopener noreferrer">
-            <span>WhatsApp</span><strong>+55 (92) 99498-6742</strong><small>Atendimento direto ↗</small>
-          </a>
-          <a class="contact-row" href="https://www.instagram.com/dmgjuridico/" target="_blank" rel="noopener noreferrer">
-            <span>Instagram</span><strong>@dmgjuridico</strong><small>Perfil oficial ↗</small>
-          </a>
-          <div class="contact-row address-row">
-            <span>Presencial</span>
-            <strong>Rua Silva Ramos, 89, Centro<br>Manaus - AM, 69010-180</strong>
-            <small>Endereço físico para atendimentos presenciais, mediante agendamento.</small>
-          </div>
+          <a class="contact-row" href="https://wa.me/5592994986742" target="_blank" rel="noopener noreferrer"><span>WhatsApp</span><strong>+55 (92) 99498-6742</strong><small>Atendimento direto ↗</small></a>
+          <a class="contact-row" href="https://www.instagram.com/dmgjuridico/" target="_blank" rel="noopener noreferrer"><span>Instagram</span><strong>@dmgjuridico</strong><small>Perfil oficial ↗</small></a>
+          <div class="contact-row address-row"><span>Presencial</span><strong>Rua Silva Ramos, 89, Centro<br>Manaus - AM, 69010-180</strong><small>Endereço físico para atendimentos presenciais, mediante agendamento.</small></div>
         </div>
       </div>
     </section>
@@ -223,29 +226,19 @@
 
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div>
-        <img class="footer-logo" src="assets/images/dmg-monogram-black-transparent.png" alt="DMG">
-        <strong>DMG | Advogados Associados</strong>
-        <p>Advocacia responsável e estratégica no Norte do Brasil.</p>
-      </div>
+      <div><img class="footer-logo" src="assets/images/dmg-monogram-black-transparent.png" alt="DMG"><strong>DMG | Advogados Associados</strong><p>Advocacia responsável e estratégica no Norte do Brasil.</p></div>
       <nav class="footer-nav" aria-label="Navegação do rodapé">
         <a href="quem-somos/">Quem somos</a>
         <a href="#atuacao">Áreas de atuação</a>
-        <a class="licita-footer" href="https://licitapara.com.br" target="_blank" rel="noopener noreferrer">LicitaPará ↗</a>
+        <a class="licita-footer" href="licitapara/">LicitaPará</a>
         <a href="area-do-cliente/" target="_blank" rel="noopener">Área do cliente</a>
         <a href="#contato">Contato</a>
       </nav>
-      <div class="footer-legal">
-        <p>Rua Silva Ramos, 89, Centro, Manaus - AM, 69010-180.</p>
-        <p>Conteúdo de caráter exclusivamente informativo, em observância às normas éticas aplicáveis à advocacia.</p>
-        <p>© <span id="ano"></span> DMG | Advogados Associados.</p>
-      </div>
+      <div class="footer-legal"><p>Rua Silva Ramos, 89, Centro, Manaus - AM, 69010-180.</p><p>Conteúdo de caráter exclusivamente informativo, em observância às normas éticas aplicáveis à advocacia.</p><p>© <span id="ano"></span> DMG | Advogados Associados.</p></div>
     </div>
   </footer>
 
-  <a class="whatsapp-float" href="https://wa.me/5592994986742" target="_blank" rel="noopener noreferrer" aria-label="Falar com a DMG pelo WhatsApp">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 11.6a8 8 0 0 1-11.8 7L4 20l1.4-4.1A8 8 0 1 1 20 11.6Z"/></svg>
-  </a>
+  <a class="whatsapp-float" href="https://wa.me/5592994986742" target="_blank" rel="noopener noreferrer" aria-label="Falar com a DMG pelo WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 11.6a8 8 0 0 1-11.8 7L4 20l1.4-4.1A8 8 0 1 1 20 11.6Z"/></svg></a>
 
   <script src="assets/js/site.js" defer></script>
 </body>
