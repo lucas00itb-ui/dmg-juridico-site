@@ -1,0 +1,227 @@
+/* LicitaPará — atualização visual inspirada na identidade enviada em 04/09/2026 */
+
+:root{
+  --lp-deep:#062f29;
+  --lp-green:#0b4e42;
+  --lp-green-2:#116b58;
+  --lp-gold:#d4ad5c;
+  --lp-cream:#f3eee3;
+}
+
+/* HOME — transforma a área do LicitaPará em um bloco marcante, com aparência de banner premium */
+.licitapara-section{
+  position:relative !important;
+  overflow:hidden !important;
+  background:
+    radial-gradient(circle at 14% 4%,rgba(34,171,114,.34),transparent 28%),
+    radial-gradient(circle at 88% 84%,rgba(19,126,88,.26),transparent 34%),
+    linear-gradient(118deg,#032a24 0%,#074338 48%,#062f29 100%) !important;
+  color:#fff !important;
+  border-top:1px solid rgba(212,173,92,.34) !important;
+  border-bottom:1px solid rgba(212,173,92,.28) !important;
+  padding:clamp(82px,8vw,118px) 0 !important;
+}
+.licitapara-section::before,
+.licitapara-section::after{
+  content:"";
+  position:absolute;
+  pointer-events:none;
+  border-radius:50%;
+  filter:blur(1px);
+}
+.licitapara-section::before{
+  width:72vw;
+  height:230px;
+  left:-18vw;
+  bottom:-135px;
+  border-top:1px solid rgba(58,206,148,.22);
+  box-shadow:0 -18px 80px rgba(31,154,108,.08);
+  transform:rotate(6deg);
+}
+.licitapara-section::after{
+  width:54vw;
+  height:180px;
+  right:-12vw;
+  bottom:-112px;
+  border-top:1px solid rgba(212,173,92,.18);
+  transform:rotate(-7deg);
+}
+.licitapara-section .container{
+  position:relative;
+  z-index:2;
+}
+.licitapara-section .licitapara-grid{
+  display:grid !important;
+  grid-template-columns:minmax(430px,1.02fr) minmax(390px,.9fr) !important;
+  grid-template-areas:
+    "brand copy"
+    "brand link" !important;
+  gap:26px clamp(48px,5vw,82px) !important;
+  align-items:center !important;
+}
+.licitapara-section .lp-signature{
+  grid-area:brand !important;
+  width:100% !important;
+  min-width:0 !important;
+  height:auto !important;
+  aspect-ratio:3/1 !important;
+  margin:0 !important;
+  padding:0 !important;
+  border:1px solid rgba(212,173,92,.56) !important;
+  border-radius:18px !important;
+  background:
+    linear-gradient(rgba(4,52,43,.07),rgba(4,52,43,.07)),
+    url('../images/licitapara-logo-oficial.webp') center/cover no-repeat !important;
+  box-shadow:0 28px 70px rgba(0,0,0,.28),0 0 0 1px rgba(255,255,255,.03) inset !important;
+  overflow:hidden !important;
+}
+.licitapara-section .lp-signature > *{display:none !important}
+.licitapara-section .licitapara-copy{grid-area:copy !important}
+.licitapara-section .licitapara-copy .eyebrow{
+  color:#e2bb69 !important;
+  font-size:.76rem !important;
+  letter-spacing:.2em !important;
+}
+.licitapara-section .licitapara-copy h2{
+  color:#fff !important;
+  font-size:clamp(2.75rem,4.1vw,4.55rem) !important;
+  line-height:.98 !important;
+  max-width:650px !important;
+}
+.licitapara-section .licitapara-copy h2 em{color:#d4ad5c !important}
+.licitapara-section .licitapara-copy p{
+  color:#d8e1dd !important;
+  font-size:1.03rem !important;
+  line-height:1.72 !important;
+  max-width:690px !important;
+}
+.licitapara-section .licitapara-link{
+  grid-area:link !important;
+  width:min(100%,420px) !important;
+  margin-top:8px !important;
+  padding:18px 20px !important;
+  border:1px solid rgba(212,173,92,.48) !important;
+  border-radius:12px !important;
+  background:rgba(255,255,255,.035) !important;
+  color:#fff !important;
+  backdrop-filter:blur(5px);
+}
+.licitapara-section .licitapara-link:hover,
+.licitapara-section .licitapara-link:focus-visible{
+  background:#d4ad5c !important;
+  color:#0b2e27 !important;
+  border-color:#d4ad5c !important;
+  transform:translateY(-2px);
+}
+.licitapara-section .licitapara-link .lp-icon{color:#d4ad5c !important}
+.licitapara-section .licitapara-link:hover .lp-icon{color:#0b2e27 !important}
+
+/* PÁGINA ESPECÍFICA — o topo recebe o mesmo universo visual do banner */
+.lp-page-hero{
+  position:relative !important;
+  overflow:hidden !important;
+  background:
+    radial-gradient(circle at 12% 0%,rgba(40,184,123,.34),transparent 30%),
+    radial-gradient(circle at 82% 90%,rgba(16,116,81,.28),transparent 36%),
+    linear-gradient(120deg,#032821 0%,#07463a 50%,#052f28 100%) !important;
+  padding:clamp(78px,8vw,122px) 0 !important;
+  border-bottom:1px solid rgba(212,173,92,.28) !important;
+}
+.lp-page-hero::after{
+  content:"" !important;
+  position:absolute !important;
+  left:-12% !important;
+  right:-12% !important;
+  bottom:-160px !important;
+  height:260px !important;
+  border-top:1px solid rgba(51,204,145,.22) !important;
+  border-radius:50% !important;
+  -webkit-text-stroke:0 !important;
+  color:transparent !important;
+  pointer-events:none !important;
+}
+.lp-page-hero .lp-page-grid{
+  grid-template-columns:minmax(0,1.12fr) minmax(330px,.62fr) !important;
+  gap:clamp(54px,7vw,105px) !important;
+  align-items:center !important;
+}
+.lp-page-mark{
+  width:min(100%,690px) !important;
+  min-width:0 !important;
+  height:auto !important;
+  aspect-ratio:3/1 !important;
+  margin:0 0 34px !important;
+  padding:0 !important;
+  border:1px solid rgba(212,173,92,.54) !important;
+  border-radius:18px !important;
+  background:
+    linear-gradient(rgba(4,52,43,.05),rgba(4,52,43,.05)),
+    url('../images/licitapara-logo-oficial.webp') center/cover no-repeat !important;
+  box-shadow:0 30px 74px rgba(0,0,0,.32),0 0 0 1px rgba(255,255,255,.025) inset !important;
+  overflow:hidden !important;
+}
+.lp-page-mark > *{display:none !important}
+.lp-page-hero .eyebrow{
+  color:#e2bb69 !important;
+  font-size:.76rem !important;
+  letter-spacing:.21em !important;
+}
+.lp-page-hero h1{
+  color:#fff !important;
+  font-size:clamp(3.1rem,4.85vw,5.35rem) !important;
+  line-height:.98 !important;
+  max-width:860px !important;
+}
+.lp-page-hero h1 em{color:#d4ad5c !important}
+.lp-page-lead{
+  color:#d9e1de !important;
+  border-left-color:#d4ad5c !important;
+  background:linear-gradient(90deg,rgba(255,255,255,.035),transparent) !important;
+  padding:24px 0 24px 28px !important;
+}
+.lp-page-lead strong{color:#fff !important}
+
+/* Mantém a chamada externa limpa */
+.lp-final-actions .button-accent{
+  background:#d4ad5c !important;
+  color:#112e27 !important;
+  border-color:#d4ad5c !important;
+}
+.lp-final-actions .button-accent:hover,
+.lp-final-actions .button-accent:focus-visible{
+  background:#f0d28d !important;
+  color:#0b2d26 !important;
+}
+
+@media(max-width:980px){
+  .licitapara-section .licitapara-grid{
+    grid-template-columns:1fr !important;
+    grid-template-areas:"brand" "copy" "link" !important;
+    gap:34px !important;
+  }
+  .licitapara-section .lp-signature{
+    width:min(100%,760px) !important;
+  }
+  .lp-page-hero .lp-page-grid{
+    grid-template-columns:1fr !important;
+    gap:38px !important;
+  }
+  .lp-page-mark{width:min(100%,760px) !important}
+  .lp-page-lead{max-width:700px !important}
+}
+
+@media(max-width:560px){
+  .licitapara-section{padding:64px 0 !important}
+  .licitapara-section .lp-signature,
+  .lp-page-mark{
+    aspect-ratio:16/6 !important;
+    border-radius:13px !important;
+  }
+  .licitapara-section .licitapara-copy h2{
+    font-size:clamp(2.45rem,12vw,3.6rem) !important;
+  }
+  .lp-page-hero{padding:62px 0 !important}
+  .lp-page-hero h1{
+    font-size:clamp(2.6rem,11vw,3.75rem) !important;
+  }
+}
