@@ -355,3 +355,52 @@
     font-size:clamp(3rem,12.6vw,4.75rem) !important;
   }
 }
+
+/* =========================================================
+   LICITAPARÁ — identidade oficial fornecida pelo usuário
+   mapa do Pará + nome + slogan
+   ========================================================= */
+.lp-official-brand{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  width:100% !important;
+  color:inherit !important;
+  white-space:normal !important;
+}
+.lp-official-brand i,
+.lp-official-brand > span{
+  display:none !important;
+}
+.lp-brand-image,
+.lp-page-brand-image{
+  display:block !important;
+  height:auto !important;
+  object-fit:contain !important;
+  border:1px solid rgba(212,173,92,.2);
+  box-shadow:0 14px 32px rgba(15,40,34,.08);
+}
+.lp-brand-image{
+  width:min(100%,250px) !important;
+  max-width:250px !important;
+}
+.lp-page-brand-image{
+  width:min(100%,305px) !important;
+  max-width:305px !important;
+}
+.licitapara-section .lp-signature{
+  min-width:230px;
+}
+.lp-page-mark{
+  margin-bottom:28px !important;
+}
+
+@media(max-width:920px){
+  .lp-brand-image{max-width:230px !important}
+  .lp-page-brand-image{max-width:280px !important}
+}
+
+@media(max-width:520px){
+  .lp-brand-image{max-width:205px !important}
+  .lp-page-brand-image{max-width:245px !important}
+}
