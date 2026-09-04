@@ -1,10 +1,39 @@
 /* Refinamento visual solicitado em 04/09/2026 */
 
-/* Navegação — mantém tudo em uma linha no desktop e destaca LicitaPará */
-.main-nav{gap:clamp(14px,1.75vw,28px)}
+/* =========================================================
+   CABEÇALHO — área do cliente somente no cadeado
+   ========================================================= */
+.main-nav{
+  gap:clamp(14px,1.75vw,28px);
+  font-size:.92rem;
+}
 .main-nav a{font-weight:500;letter-spacing:-.01em}
 .main-nav .external-nav{color:#145548;font-weight:800}
 .main-nav .external-nav::after{background:#145548}
+
+/* O texto “Área do cliente” sai da navegação; o cadeado permanece como acesso. */
+.main-nav a[href*="area-do-cliente"]{display:none!important}
+
+/* Balão à esquerda e cadeado isolado no extremo direito. */
+.header-actions{
+  gap:0;
+  margin-left:clamp(14px,2vw,30px);
+}
+.header-actions .menu-toggle{order:0}
+.header-actions .chat{
+  order:1;
+  margin-right:18px;
+}
+.header-actions .lock{
+  order:2;
+  margin-left:0;
+  border-color:#171713;
+}
+.header-actions .lock:hover,
+.header-actions .lock:focus-visible{
+  background:#171713;
+  color:#fff;
+}
 
 /* =========================================================
    QUEM SOMOS — PRINT 1
@@ -234,7 +263,9 @@
 .footer-nav .licita-footer:hover{color:#79a99b}
 
 @media(max-width:1180px){
-  .main-nav{gap:13px;font-size:.76rem}
+  .main-nav{gap:13px;font-size:.84rem}
+  .header-actions{margin-left:14px}
+  .header-actions .chat{margin-right:14px}
   .page-hero .container{width:min(calc(100% - 64px),1080px)}
   .office-section .container{width:min(calc(100% - 70px),1060px)}
   .licitapara-grid{grid-template-columns:minmax(190px,.5fr) minmax(420px,1.08fr) minmax(220px,.56fr);gap:38px}
@@ -254,6 +285,12 @@
   .licitapara-grid{gap:34px}
   .lp-signature{font-size:3rem}
   .licitapara-link{max-width:540px}
+}
+
+@media(max-width:820px){
+  .header-actions{margin-left:0}
+  .header-actions .menu-toggle{margin-right:8px}
+  .header-actions .chat{margin-right:10px}
 }
 
 @media(max-width:520px){
