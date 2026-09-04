@@ -1,0 +1,9 @@
+.site-header{background:rgba(246,242,233,.97)!important;border-bottom:1px solid rgba(12,12,12,.16)!important;box-shadow:0 6px 24px rgba(0,0,0,.04)}
+.site-header .brand{color:#111!important}
+.site-header .main-nav{color:#181818!important}
+.site-header .main-nav a:hover,.site-header .main-nav a:focus-visible{color:#8a6c31!important}
+.site-header .nav-cta{border-color:rgba(17,17,17,.35)!important}
+.site-header .menu-toggle span{background:#111!important}
+.site-header .brand img{width:124px!important;height:auto!important;max-height:64px!important;object-fit:contain!important}
+@media(max-width:980px){.site-header .main-nav{background:#f6f2e9!important;border-top:1px solid rgba(17,17,17,.12)!important}.site-header .main-nav a{border-bottom:1px solid rgba(17,17,17,.1)!important}}
+@media(max-width:640px){.site-header .brand img{width:112px!important;max-height:58px!important}}
