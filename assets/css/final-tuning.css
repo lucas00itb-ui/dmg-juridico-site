@@ -1,3 +1,138 @@
 @import url('./final-tuning-legacy.css');
 @import url('./licitapara-refresh.css');
-@import url('./licitapara-banner-override.css');
+
+/* =========================================================
+   LICITAPARÁ — correção definitiva
+   Usa somente o SVG oficial chamado diretamente pelo HTML.
+   Remove o override antigo que escondia a imagem e gerava
+   o retângulo vazio.
+   ========================================================= */
+html body .licitapara-section .lp-signature,
+html body .lp-page-mark{
+  position:relative !important;
+  display:block !important;
+  background:none !important;
+  background-image:none !important;
+  padding:0 !important;
+  overflow:hidden !important;
+  border:1px solid rgba(212,173,92,.72) !important;
+  border-radius:12px !important;
+  box-shadow:0 24px 58px rgba(0,0,0,.24) !important;
+  color:inherit !important;
+  font-size:inherit !important;
+  line-height:normal !important;
+}
+
+html body .licitapara-section .lp-signature::before,
+html body .licitapara-section .lp-signature::after,
+html body .lp-page-mark::before,
+html body .lp-page-mark::after{
+  content:none !important;
+  display:none !important;
+  background:none !important;
+}
+
+html body .licitapara-section .lp-signature > img,
+html body .lp-page-mark > img{
+  display:block !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  position:static !important;
+  inset:auto !important;
+  width:100% !important;
+  max-width:none !important;
+  min-width:0 !important;
+  height:auto !important;
+  max-height:none !important;
+  min-height:0 !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  transform:none !important;
+  filter:none !important;
+}
+
+/* HOME — a marca vira um banner horizontal principal. */
+html body .licitapara-section{
+  background:linear-gradient(115deg,#073c34 0%,#075244 52%,#06372f 100%) !important;
+  color:#fff !important;
+}
+html body .licitapara-section .container.licitapara-grid{
+  display:grid !important;
+  grid-template-columns:minmax(0,1.18fr) minmax(280px,.72fr) !important;
+  gap:clamp(34px,4.6vw,72px) !important;
+  align-items:center !important;
+}
+html body .licitapara-section .lp-signature{
+  grid-column:1 / -1 !important;
+  justify-self:center !important;
+  width:min(100%,1080px) !important;
+  max-width:1080px !important;
+  min-width:0 !important;
+  height:auto !important;
+  min-height:0 !important;
+  aspect-ratio:auto !important;
+  margin:0 auto clamp(30px,3.4vw,48px) !important;
+}
+html body .licitapara-section .licitapara-copy{grid-column:1 !important}
+html body .licitapara-section .licitapara-link{grid-column:2 !important}
+html body .licitapara-section .licitapara-copy h2{color:#fff !important}
+html body .licitapara-section .licitapara-copy h2 em{color:#d8ae57 !important}
+html body .licitapara-section .licitapara-copy p{color:#e6ebe8 !important}
+html body .licitapara-section .licitapara-link{color:#fff !important;border-color:rgba(255,255,255,.34) !important}
+
+/* PÁGINA ESPECÍFICA — mesma arte, grande e sem sobreposição. */
+html body .lp-page-hero{
+  background:linear-gradient(115deg,#062f29 0%,#084e40 52%,#052d27 100%) !important;
+}
+html body .lp-page-grid{
+  grid-template-columns:1fr !important;
+  gap:34px !important;
+}
+html body .lp-page-mark{
+  width:min(100%,1080px) !important;
+  max-width:1080px !important;
+  min-width:0 !important;
+  height:auto !important;
+  min-height:0 !important;
+  aspect-ratio:auto !important;
+  margin:0 auto clamp(30px,3.4vw,46px) !important;
+}
+html body .lp-page-hero .reveal-left{width:100% !important}
+html body .lp-page-lead{max-width:760px !important}
+
+/* Botão externo: texto limpo, URL permanece apenas no href. */
+html body .lp-final-actions .button-accent{
+  font-size:0 !important;
+}
+html body .lp-final-actions .button-accent > *{
+  display:none !important;
+}
+html body .lp-final-actions .button-accent::after{
+  content:'Ir para LicitaPará' !important;
+  display:inline-block !important;
+  font-size:.95rem !important;
+  line-height:1.2 !important;
+  font-weight:800 !important;
+}
+
+@media(max-width:980px){
+  html body .licitapara-section .container.licitapara-grid{
+    grid-template-columns:1fr !important;
+  }
+  html body .licitapara-section .licitapara-copy,
+  html body .licitapara-section .licitapara-link{
+    grid-column:1 !important;
+  }
+  html body .licitapara-section .lp-signature,
+  html body .lp-page-mark{
+    width:min(100%,860px) !important;
+  }
+}
+
+@media(max-width:560px){
+  html body .licitapara-section .lp-signature,
+  html body .lp-page-mark{
+    width:100% !important;
+    border-radius:8px !important;
+  }
+}
