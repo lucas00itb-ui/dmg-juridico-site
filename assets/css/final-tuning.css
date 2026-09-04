@@ -2,25 +2,46 @@
 @import url('./licitapara-refresh.css');
 
 /* =========================================================
-   LICITAPARÁ — correção definitiva
-   Usa somente o SVG oficial chamado diretamente pelo HTML.
-   Remove o override antigo que escondia a imagem e gerava
-   o retângulo vazio.
+   LICITAPARÁ — CORREÇÃO DEFINITIVA
+   O site.js injeta uma imagem antiga dentro de .lp-signature
+   e .lp-page-mark. Essa imagem é escondida e o novo SVG
+   oficial é exibido como única arte visual.
    ========================================================= */
 html body .licitapara-section .lp-signature,
 html body .lp-page-mark{
   position:relative !important;
   display:block !important;
-  background:none !important;
-  background-image:none !important;
+  background-color:#064d40 !important;
+  background-image:url('../images/licitapara-logo.svg') !important;
+  background-repeat:no-repeat !important;
+  background-position:center !important;
+  background-size:cover !important;
   padding:0 !important;
   overflow:hidden !important;
   border:1px solid rgba(212,173,92,.72) !important;
   border-radius:12px !important;
   box-shadow:0 24px 58px rgba(0,0,0,.24) !important;
-  color:inherit !important;
-  font-size:inherit !important;
-  line-height:normal !important;
+  color:transparent !important;
+  font-size:0 !important;
+  line-height:0 !important;
+}
+
+/* A imagem antiga inserida pelo JavaScript não aparece. */
+html body .licitapara-section .lp-signature > img,
+html body .lp-page-mark > img,
+html body .licitapara-section .lp-signature > span,
+html body .licitapara-section .lp-signature > i,
+html body .lp-page-mark > span,
+html body .lp-page-mark > i{
+  display:none !important;
+  visibility:hidden !important;
+  opacity:0 !important;
+  width:0 !important;
+  height:0 !important;
+  max-width:0 !important;
+  max-height:0 !important;
+  position:absolute !important;
+  pointer-events:none !important;
 }
 
 html body .licitapara-section .lp-signature::before,
@@ -29,29 +50,9 @@ html body .lp-page-mark::before,
 html body .lp-page-mark::after{
   content:none !important;
   display:none !important;
-  background:none !important;
 }
 
-html body .licitapara-section .lp-signature > img,
-html body .lp-page-mark > img{
-  display:block !important;
-  visibility:visible !important;
-  opacity:1 !important;
-  position:static !important;
-  inset:auto !important;
-  width:100% !important;
-  max-width:none !important;
-  min-width:0 !important;
-  height:auto !important;
-  max-height:none !important;
-  min-height:0 !important;
-  object-fit:contain !important;
-  object-position:center !important;
-  transform:none !important;
-  filter:none !important;
-}
-
-/* HOME — a marca vira um banner horizontal principal. */
+/* HOME — banner grande, horizontal e centralizado. */
 html body .licitapara-section{
   background:linear-gradient(115deg,#073c34 0%,#075244 52%,#06372f 100%) !important;
   color:#fff !important;
@@ -70,7 +71,7 @@ html body .licitapara-section .lp-signature{
   min-width:0 !important;
   height:auto !important;
   min-height:0 !important;
-  aspect-ratio:auto !important;
+  aspect-ratio:3 / 1 !important;
   margin:0 auto clamp(30px,3.4vw,48px) !important;
 }
 html body .licitapara-section .licitapara-copy{grid-column:1 !important}
@@ -94,13 +95,13 @@ html body .lp-page-mark{
   min-width:0 !important;
   height:auto !important;
   min-height:0 !important;
-  aspect-ratio:auto !important;
+  aspect-ratio:3 / 1 !important;
   margin:0 auto clamp(30px,3.4vw,46px) !important;
 }
 html body .lp-page-hero .reveal-left{width:100% !important}
 html body .lp-page-lead{max-width:760px !important}
 
-/* Botão externo: texto limpo, URL permanece apenas no href. */
+/* Botão externo: texto limpo; o endereço continua no href. */
 html body .lp-final-actions .button-accent{
   font-size:0 !important;
 }
@@ -134,5 +135,6 @@ html body .lp-final-actions .button-accent::after{
   html body .lp-page-mark{
     width:100% !important;
     border-radius:8px !important;
+    background-size:cover !important;
   }
 }
