@@ -11,6 +11,38 @@
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/refinements.css">
   <link rel="stylesheet" href="../assets/css/licitapara-page.css">
+  <style>
+    /* LicitaPará — logo principal aplicada diretamente nesta página */
+    .lp-page-mark{
+      display:flex!important;
+      align-items:center!important;
+      justify-content:center!important;
+      width:clamp(390px,38vw,570px)!important;
+      max-width:100%!important;
+      min-width:0!important;
+      height:auto!important;
+      margin:0 0 30px!important;
+      padding:15px 18px!important;
+      background:#004b3e!important;
+      border:1px solid rgba(212,173,92,.68)!important;
+      box-shadow:0 22px 48px rgba(0,0,0,.28)!important;
+      overflow:hidden!important;
+      color:inherit!important;
+      font-size:inherit!important;
+      line-height:normal!important;
+    }
+    .lp-page-mark img{
+      display:block!important;
+      width:100%!important;
+      height:auto!important;
+      object-fit:contain!important;
+    }
+    .lp-page-mark>span,
+    .lp-page-mark>i{display:none!important}
+    @media(max-width:760px){
+      .lp-page-mark{width:min(100%,500px)!important;padding:11px 13px!important;margin-bottom:24px!important}
+    }
+  </style>
   <title>LicitaPará | DMG | Advogados Associados</title>
 </head>
 <body>
@@ -27,9 +59,9 @@
         <a href="../">Início</a>
         <a href="../quem-somos/">Quem somos</a>
         <a href="../#atuacao">Áreas de atuação</a>
+        <a href="../#contato">Contato</a>
         <a class="external-nav" href="./" aria-current="page">LicitaPará</a>
         <a href="../area-do-cliente/" target="_blank" rel="noopener">Área do cliente</a>
-        <a href="../#contato">Contato</a>
       </nav>
 
       <div class="header-actions">
@@ -50,7 +82,9 @@
     <section class="lp-page-hero" aria-labelledby="lp-title">
       <div class="container lp-page-grid">
         <div class="reveal reveal-left">
-          <div class="lp-page-mark" aria-hidden="true"><span>LP</span><i></i><span>DMG</span></div>
+          <div class="lp-page-mark">
+            <img src="../assets/images/licitapara-logo.svg" alt="LicitaPará — Inteligência em Licitações" width="570" height="143">
+          </div>
           <p class="eyebrow">Licitações e contratos públicos</p>
           <h1 id="lp-title">Tecnologia e conteúdo de um lado. <em>Atuação jurídica</em> do outro.</h1>
         </div>
@@ -83,18 +117,9 @@
         </div>
 
         <div class="lp-steps">
-          <article class="lp-step reveal">
-            <small>01</small>
-            <div><h3>LicitaPará</h3><p>Apresenta o ambiente especializado em licitações e contratos públicos e conecta o usuário aos conteúdos e caminhos disponíveis.</p></div>
-          </article>
-          <article class="lp-step reveal">
-            <small>02</small>
-            <div><h3>Análise jurídica</h3><p>Quando há necessidade de avaliação técnica, a DMG examina o caso concreto, os documentos e os riscos jurídicos envolvidos.</p></div>
-          </article>
-          <article class="lp-step reveal">
-            <small>03</small>
-            <div><h3>Atuação da DMG</h3><p>Se cabível, o escritório conduz a medida jurídica adequada, sempre de acordo com as circunstâncias e a legislação aplicável.</p></div>
-          </article>
+          <article class="lp-step reveal"><small>01</small><div><h3>LicitaPará</h3><p>Apresenta o ambiente especializado em licitações e contratos públicos e conecta o usuário aos conteúdos e caminhos disponíveis.</p></div></article>
+          <article class="lp-step reveal"><small>02</small><div><h3>Análise jurídica</h3><p>Quando há necessidade de avaliação técnica, a DMG examina o caso concreto, os documentos e os riscos jurídicos envolvidos.</p></div></article>
+          <article class="lp-step reveal"><small>03</small><div><h3>Atuação da DMG</h3><p>Se cabível, o escritório conduz a medida jurídica adequada, sempre de acordo com as circunstâncias e a legislação aplicável.</p></div></article>
         </div>
       </div>
     </section>
@@ -102,13 +127,9 @@
     <section class="lp-services" aria-labelledby="atuacao-licitacoes">
       <div class="container">
         <div class="lp-services-head reveal">
-          <div>
-            <p class="eyebrow">Atuação jurídica</p>
-            <h2 id="atuacao-licitacoes">A DMG na frente jurídica do LicitaPará.</h2>
-          </div>
+          <div><p class="eyebrow">Atuação jurídica</p><h2 id="atuacao-licitacoes">A DMG na frente jurídica do LicitaPará.</h2></div>
           <p>A atuação pode envolver diferentes medidas administrativas e judiciais, conforme o problema apresentado e a etapa do procedimento licitatório.</p>
         </div>
-
         <div class="lp-service-grid">
           <article class="lp-service reveal"><span>01</span><h3>Impugnações de editais</h3><p>Análise de cláusulas, exigências, critérios e eventuais ilegalidades ou restrições indevidas à competitividade.</p></article>
           <article class="lp-service reveal"><span>02</span><h3>Recursos administrativos</h3><p>Estruturação e acompanhamento de recursos, contrarrazões e demais manifestações dentro do procedimento licitatório.</p></article>
@@ -136,11 +157,7 @@
 
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div>
-        <img class="footer-logo" src="../assets/images/dmg-monogram-black-transparent.png" alt="DMG">
-        <strong>DMG | Advogados Associados</strong>
-        <p>Advocacia responsável e estratégica no Norte do Brasil.</p>
-      </div>
+      <div><img class="footer-logo" src="../assets/images/dmg-monogram-black-transparent.png" alt="DMG"><strong>DMG | Advogados Associados</strong><p>Advocacia responsável e estratégica no Norte do Brasil.</p></div>
       <nav class="footer-nav" aria-label="Navegação do rodapé">
         <a href="../quem-somos/">Quem somos</a>
         <a href="../#atuacao">Áreas de atuação</a>
@@ -156,9 +173,7 @@
     </div>
   </footer>
 
-  <a class="whatsapp-float" href="https://wa.me/5592994986742" target="_blank" rel="noopener noreferrer" aria-label="Falar com a DMG pelo WhatsApp">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 11.6a8 8 0 0 1-11.8 7L4 20l1.4-4.1A8 8 0 1 1 20 11.6Z"/></svg>
-  </a>
+  <a class="whatsapp-float" href="https://wa.me/5592994986742" target="_blank" rel="noopener noreferrer" aria-label="Falar com a DMG pelo WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 11.6a8 8 0 0 1-11.8 7L4 20l1.4-4.1A8 8 0 1 1 20 11.6Z"/></svg></a>
 
   <script src="../assets/js/site.js" defer></script>
 </body>
