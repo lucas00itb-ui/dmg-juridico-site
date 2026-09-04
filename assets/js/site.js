@@ -86,6 +86,19 @@ if (!document.querySelector('style[data-dmg-whatsapp-brand]')) {
     a.whatsapp-float.whatsapp-brand-icon{
       border-radius:50% !important;
     }
+    a.whatsapp-text-icon{
+      display:inline-flex !important;
+      align-items:center !important;
+      justify-content:center !important;
+      gap:10px !important;
+    }
+    a.whatsapp-text-icon .whatsapp-inline-icon{
+      width:20px !important;
+      height:20px !important;
+      flex:0 0 20px !important;
+      color:#25D366 !important;
+      display:block !important;
+    }
   `;
   document.head.appendChild(whatsappStyle);
 }
@@ -101,6 +114,17 @@ document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
   link.innerHTML = whatsappIconSvg;
   if (!link.getAttribute('aria-label')) link.setAttribute('aria-label', 'Falar pelo WhatsApp');
   link.setAttribute('title', 'WhatsApp');
+});
+
+/* Botões textuais do WhatsApp: mantém a frase e adiciona o símbolo antes do texto. */
+document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
+  const label = link.textContent.replace(/\s+/g, ' ').trim();
+  if (!label.toLowerCase().includes('falar com a dmg')) return;
+  if (link.querySelector('.whatsapp-inline-icon')) return;
+
+  link.classList.add('whatsapp-text-icon');
+  const icon = whatsappIconSvg.replace('<svg ', '<svg class="whatsapp-inline-icon" ');
+  link.insertAdjacentHTML('afterbegin', icon);
 });
 
 /* Página LicitaPará: rótulo com pontuação correta. */
