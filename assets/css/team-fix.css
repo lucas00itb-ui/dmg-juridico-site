@@ -1,12 +1,42 @@
-/* Ajuste específico da equipe: mantém as fotografias originais e controla somente o enquadramento no site. */
+/* Equipe — retratos proporcionais, sem zoom agressivo e sem distorção. */
 .team-grid{align-items:stretch}
 .team-card{display:flex;flex-direction:column;height:100%;min-width:0}
-.portrait-frame{width:100%;height:455px;aspect-ratio:auto;overflow:hidden;background:#202020;position:relative}
-.portrait-frame img{display:block;width:100%!important;height:100%!important;max-width:none;aspect-ratio:auto!important;object-fit:cover!important;object-position:50% 26%!important;filter:none!important;opacity:1!important}
-/* Lucas: preserva rosto, ombros e maior parte do terno sem ampliar excessivamente a fotografia. */
-.team-card:first-child .portrait-frame img{object-position:50% 24%!important}
+.portrait-frame{
+  width:100%;
+  height:auto;
+  aspect-ratio:4/5;
+  overflow:hidden;
+  background:#1c1c1b;
+  position:relative;
+}
+.portrait-frame img{
+  display:block;
+  width:100%!important;
+  height:100%!important;
+  max-width:none!important;
+  aspect-ratio:4/5!important;
+  object-fit:cover!important;
+  object-position:50% 50%!important;
+  filter:none!important;
+  opacity:1!important;
+  transform:none!important;
+  image-rendering:auto;
+}
+/* Ajustes mínimos de composição, sem alterar proporção. */
+.team-card:first-child .portrait-frame img{object-position:50% 48%!important}
+.team-card:nth-child(2) .portrait-frame img{object-position:50% 50%!important}
+.team-card:nth-child(3) .portrait-frame img{object-position:50% 50%!important}
 .team-info{display:flex;flex-direction:column;flex:1;min-height:235px}
 .team-info p{margin-top:auto}
-@media(max-width:1050px){.portrait-frame{height:430px}.team-card:first-child .portrait-frame img{object-position:50% 23%!important}}
-@media(max-width:820px){.portrait-frame{height:auto;aspect-ratio:4/5}.portrait-frame img{position:absolute;inset:0;object-position:50% 25%!important}.team-card:first-child .portrait-frame img{object-position:50% 22%!important}.team-info{min-height:0}}
-@media(max-width:520px){.portrait-frame{aspect-ratio:4/5}.team-card:first-child .portrait-frame img{object-position:50% 20%!important}}
+@media(max-width:1050px){
+  .portrait-frame{aspect-ratio:4/5}
+}
+@media(max-width:820px){
+  .portrait-frame{aspect-ratio:4/5}
+  .portrait-frame img{position:absolute;inset:0}
+  .team-info{min-height:0}
+}
+@media(max-width:520px){
+  .portrait-frame{aspect-ratio:4/5}
+  .team-card:first-child .portrait-frame img{object-position:50% 47%!important}
+}
