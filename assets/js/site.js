@@ -1,3 +1,17 @@
+const siteScript = document.querySelector('script[src*="assets/js/site.js"]');
+if (siteScript) {
+  const scriptUrl = new URL(siteScript.src, document.baseURI);
+  const rootUrl = scriptUrl.href.replace(/assets\/js\/site\.js(?:\?.*)?$/, '');
+
+  if (!document.querySelector('link[data-dmg-final-tuning]')) {
+    const finalTuning = document.createElement('link');
+    finalTuning.rel = 'stylesheet';
+    finalTuning.href = new URL('assets/css/final-tuning.css', rootUrl).href;
+    finalTuning.dataset.dmgFinalTuning = 'true';
+    document.head.appendChild(finalTuning);
+  }
+}
+
 const menuButton = document.querySelector('.menu-toggle');
 const menu = document.querySelector('.main-nav');
 
@@ -69,7 +83,6 @@ if (officeValues.length) {
  * da DMG sobre o LicitaPará. O redirecionamento externo fica apenas dentro
  * dessa página, após a explicação da parceria e da atuação jurídica.
  */
-const siteScript = document.querySelector('script[src*="assets/js/site.js"]');
 if (siteScript) {
   const scriptUrl = new URL(siteScript.src, document.baseURI);
   const rootUrl = scriptUrl.href.replace(/assets\/js\/site\.js(?:\?.*)?$/, '');
