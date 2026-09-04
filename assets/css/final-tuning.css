@@ -209,13 +209,78 @@ html body .lp-info .lp-info-copy{
 }
 html body .lp-info .lp-info-copy p,
 html body .lp-info .lp-note{
-  text-align:left !important;
+  text-align:justify !important;
+  text-align-last:left !important;
+  hyphens:auto;
+  -webkit-hyphens:auto;
+  word-spacing:.015em;
 }
 html body .lp-info .lp-info-copy p{
   margin:0 0 22px !important;
 }
 html body .lp-info .lp-note{
   margin-top:30px !important;
+}
+
+/* =========================================================
+   CABEÇALHO GLOBAL — tipografia, espaçamento e ações
+   ========================================================= */
+@media(min-width:821px){
+  html body .main-nav{
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+    gap:28px !important;
+    padding-right:0 !important;
+    font-size:.96rem !important;
+    font-weight:700 !important;
+  }
+
+  html body .main-nav a{
+    font-size:.96rem !important;
+    font-weight:700 !important;
+    transform:none !important;
+    margin:0 !important;
+    letter-spacing:0 !important;
+  }
+
+  html body .main-nav a[href$="#contato"]{
+    transform:none !important;
+  }
+
+  html body .header-actions{
+    transform:translateX(18px) !important;
+  }
+
+  html body .header-actions .chat,
+  html body .header-actions .lock{
+    font-size:.87rem !important;
+    font-weight:800 !important;
+    line-height:1.18 !important;
+    letter-spacing:.003em !important;
+  }
+
+  html body .header-actions .chat::after,
+  html body .header-actions .lock::after{
+    font-weight:800 !important;
+  }
+}
+
+@media(min-width:821px) and (max-width:1120px){
+  html body .main-nav{
+    gap:18px !important;
+    font-size:.88rem !important;
+  }
+  html body .main-nav a{
+    font-size:.88rem !important;
+  }
+  html body .header-actions{
+    transform:translateX(10px) !important;
+  }
+  html body .header-actions .chat,
+  html body .header-actions .lock{
+    font-size:.8rem !important;
+  }
 }
 
 @media(max-width:980px){
