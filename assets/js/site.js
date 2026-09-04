@@ -55,6 +55,54 @@ if (menuButton && menu) {
 const year = document.querySelector('#ano');
 if (year) year.textContent = String(new Date().getFullYear());
 
+/* WhatsApp — identidade oficial nos botões de ícone em todas as páginas. */
+const whatsappIconSvg = `
+  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path fill="currentColor" d="M12.04 2C6.5 2 2 6.36 2 11.74c0 1.72.46 3.4 1.34 4.87L2 22l5.55-1.43a10.2 10.2 0 0 0 4.49 1.05h.01c5.54 0 10.04-4.36 10.04-9.74S17.58 2 12.04 2Zm0 17.98h-.01a8.55 8.55 0 0 1-4.36-1.17l-.31-.18-3.3.85.88-3.12-.2-.32a7.97 7.97 0 0 1-1.26-4.3c0-4.48 3.84-8.12 8.57-8.12 4.72 0 8.56 3.64 8.56 8.12 0 4.48-3.84 8.12-8.56 8.12Zm4.7-6.07c-.26-.12-1.53-.73-1.77-.81-.24-.09-.41-.12-.59.12-.17.24-.68.81-.83.98-.15.16-.3.18-.56.06-.26-.12-1.1-.39-2.09-1.24-.77-.67-1.29-1.5-1.44-1.75-.15-.24-.02-.37.11-.49.12-.11.26-.29.39-.43.13-.14.17-.24.26-.41.09-.16.04-.31-.02-.43-.06-.12-.59-1.38-.81-1.89-.21-.5-.43-.43-.59-.44h-.5c-.17 0-.46.06-.7.31-.24.24-.92.87-.92 2.12 0 1.25.94 2.46 1.07 2.63.13.16 1.84 2.72 4.46 3.81.62.26 1.11.41 1.49.52.63.19 1.2.16 1.65.1.5-.07 1.53-.61 1.75-1.19.22-.58.22-1.08.15-1.19-.06-.1-.24-.16-.5-.28Z"/>
+  </svg>`;
+
+if (!document.querySelector('style[data-dmg-whatsapp-brand]')) {
+  const whatsappStyle = document.createElement('style');
+  whatsappStyle.dataset.dmgWhatsappBrand = 'true';
+  whatsappStyle.textContent = `
+    a.whatsapp-brand-icon{
+      background:#25D366 !important;
+      color:#fff !important;
+      border-color:#25D366 !important;
+      box-shadow:0 10px 28px rgba(37,211,102,.24) !important;
+    }
+    a.whatsapp-brand-icon:hover,
+    a.whatsapp-brand-icon:focus-visible{
+      background:#1fbd5b !important;
+      color:#fff !important;
+      border-color:#1fbd5b !important;
+      outline:none !important;
+    }
+    a.whatsapp-brand-icon svg{
+      width:24px !important;
+      height:24px !important;
+      display:block !important;
+    }
+    a.whatsapp-float.whatsapp-brand-icon{
+      border-radius:50% !important;
+    }
+  `;
+  document.head.appendChild(whatsappStyle);
+}
+
+document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
+  const iconOnly = link.classList.contains('whatsapp-float') ||
+    link.classList.contains('chat') ||
+    (link.textContent.trim() === '' && link.querySelector('svg'));
+
+  if (!iconOnly) return;
+
+  link.classList.add('whatsapp-brand-icon');
+  link.innerHTML = whatsappIconSvg;
+  if (!link.getAttribute('aria-label')) link.setAttribute('aria-label', 'Falar pelo WhatsApp');
+  link.setAttribute('title', 'WhatsApp');
+});
+
 /* Página LicitaPará: rótulo com pontuação correta. */
 const licitaInfoEyebrow = document.querySelector('.lp-info .eyebrow');
 if (licitaInfoEyebrow && licitaInfoEyebrow.textContent.trim().toLowerCase() === 'o que é o licitapará') {
