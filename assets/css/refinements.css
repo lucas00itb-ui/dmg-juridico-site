@@ -24,10 +24,10 @@
 .office-value::before{content:"";position:absolute;left:-1px;top:-1px;width:38px;height:3px;background:#c99538;transition:width .28s ease,background .28s ease}
 .office-value span{font:500 1.18rem/1.18 Georgia,"Times New Roman",serif;color:#29271f;transition:color .28s ease}
 .office-value small{color:#6f6a60;line-height:1.55;transition:color .28s ease}
-.office-value:hover,.office-value:focus,.office-value:active{background:#cfa555;border-color:#b78932;color:#111;transform:translateY(-4px);box-shadow:0 16px 30px rgba(54,42,22,.12)}
-.office-value:hover::before,.office-value:focus::before,.office-value:active::before{width:100%;background:#1b4f43}
-.office-value:hover span,.office-value:focus span,.office-value:active span{color:#111}
-.office-value:hover small,.office-value:focus small,.office-value:active small{color:#332914}
+.office-value:hover,.office-value:focus,.office-value:active,.office-value.is-active{background:#cfa555;border-color:#b78932;color:#111;transform:translateY(-4px);box-shadow:0 16px 30px rgba(54,42,22,.12)}
+.office-value:hover::before,.office-value:focus::before,.office-value:active::before,.office-value.is-active::before{width:100%;background:#1b4f43}
+.office-value:hover span,.office-value:focus span,.office-value:active span,.office-value.is-active span{color:#111}
+.office-value:hover small,.office-value:focus small,.office-value:active small,.office-value.is-active small{color:#332914}
 
 /* LicitaPará — bloco inspirado na versão original */
 .licitapara-section{background:#e8e1d5;color:#171713;border-top:1px solid rgba(27,79,67,.12);border-bottom:1px solid rgba(27,79,67,.14);padding:clamp(78px,8vw,118px) 0}
