@@ -404,3 +404,114 @@
   .lp-brand-image{max-width:205px !important}
   .lp-page-brand-image{max-width:245px !important}
 }
+
+/* =========================================================
+   LICITAPARÁ — volume visual reduzido + fundo mais aparente
+   ========================================================= */
+.lp-page-hero{
+  padding:clamp(72px,7vw,108px) 0 !important;
+}
+.lp-page-grid{
+  align-items:center !important;
+  gap:clamp(44px,6vw,92px) !important;
+}
+.lp-page-hero h1{
+  font-size:clamp(3.25rem,5.15vw,5.6rem) !important;
+  line-height:.97 !important;
+  letter-spacing:-.045em !important;
+  max-width:800px !important;
+}
+.lp-page-lead{
+  font-size:1.02rem !important;
+  line-height:1.7 !important;
+}
+
+.lp-info,
+.lp-role,
+.lp-services,
+.lp-final{
+  padding-top:clamp(68px,6.8vw,100px) !important;
+  padding-bottom:clamp(68px,6.8vw,100px) !important;
+}
+.lp-info h2,
+.lp-role h2,
+.lp-services h2,
+.lp-final h2{
+  font-size:clamp(2.45rem,3.85vw,4.25rem) !important;
+  line-height:1.02 !important;
+  letter-spacing:-.04em !important;
+  max-width:720px !important;
+}
+.lp-info h2{color:#185548 !important}
+.lp-role h2{color:#d4ad5c !important}
+.lp-services h2{color:#174f43 !important}
+.lp-final h2{color:#d4ad5c !important}
+.lp-info .eyebrow,
+.lp-role .eyebrow,
+.lp-services .eyebrow,
+.lp-final .eyebrow{
+  color:#c4933c !important;
+}
+.lp-info-copy,
+.lp-role-head>p,
+.lp-services-head>p,
+.lp-final-copy>p{
+  font-size:1rem !important;
+  line-height:1.7 !important;
+}
+.lp-step{min-height:280px !important}
+.lp-step h3{
+  margin-top:38px !important;
+  font-size:clamp(1.6rem,2.15vw,2.35rem) !important;
+}
+.lp-service{min-height:215px !important}
+.lp-service h3{
+  margin-top:36px !important;
+  font-size:clamp(1.6rem,2.15vw,2.4rem) !important;
+}
+
+/* Garante, na HOME e na página interna, o logo com o mapa do Pará em dourado. */
+.licitapara-section .lp-signature,
+.lp-page-mark{
+  position:relative !important;
+  width:233px !important;
+  height:80px !important;
+  min-width:233px !important;
+  background:url('../images/licitapara-logo.svg') center/contain no-repeat !important;
+  overflow:hidden !important;
+  color:transparent !important;
+  font-size:0 !important;
+  line-height:0 !important;
+  gap:0 !important;
+}
+.licitapara-section .lp-signature > *,
+.lp-page-mark > *{
+  display:none !important;
+}
+.licitapara-section .lp-brand-image,
+.lp-page-brand-image{
+  display:none !important;
+}
+
+@media(max-width:900px){
+  .lp-page-hero h1{font-size:clamp(2.9rem,8.5vw,4.7rem) !important}
+  .lp-info h2,
+  .lp-role h2,
+  .lp-services h2,
+  .lp-final h2{font-size:clamp(2.25rem,6.7vw,3.55rem) !important}
+}
+
+@media(max-width:520px){
+  .lp-page-hero{padding:58px 0 !important}
+  .lp-page-hero h1{font-size:clamp(2.65rem,10.8vw,3.8rem) !important}
+  .lp-info h2,
+  .lp-role h2,
+  .lp-services h2,
+  .lp-final h2{font-size:clamp(2.05rem,9.2vw,3.1rem) !important}
+  .licitapara-section .lp-signature,
+  .lp-page-mark{
+    width:198px !important;
+    height:68px !important;
+    min-width:198px !important;
+  }
+}
