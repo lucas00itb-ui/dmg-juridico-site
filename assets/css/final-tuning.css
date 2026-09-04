@@ -132,6 +132,13 @@ html body .lp-page-mark > img{
 html body .lp-page-hero .reveal-left{width:100% !important}
 html body .lp-page-lead{max-width:820px !important}
 
+/* Rótulo acima da logo: maior e levemente mais alto. */
+html body .lp-page-hero .lp-page-kicker{
+  font-size:clamp(.88rem,1.05vw,1rem) !important;
+  margin:-14px auto 22px !important;
+  letter-spacing:.19em !important;
+}
+
 /* =========================================================
    PÁGINA LICITAPARÁ — AJUSTES VISUAIS FINAIS
    ========================================================= */
@@ -265,5 +272,9 @@ html body .lp-info .lp-note{
     width:100% !important;
     border-radius:8px !important;
     background-size:cover !important;
+  }
+  html body .lp-page-hero .lp-page-kicker{
+    font-size:.82rem !important;
+    margin:-6px auto 18px !important;
   }
 }
