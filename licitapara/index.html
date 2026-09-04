@@ -12,355 +12,41 @@
   <link rel="stylesheet" href="../assets/css/refinements.css">
   <link rel="stylesheet" href="../assets/css/licitapara-page.css">
   <style>
-    /* HERO LICITAPARÁ — composição central e organizada */
-    html body .lp-page-hero .container.lp-page-grid{
-      display:block!important;
-      width:min(calc(100% - 64px),1180px)!important;
-      margin-inline:auto!important;
-    }
-
-    .lp-hero-main{
-      width:100%;
-      max-width:1120px;
-      margin:0 auto;
-      text-align:center;
-    }
-
-    .lp-page-kicker{
-      margin:0 auto 20px!important;
-      text-align:center!important;
-      color:#d4ad5c!important;
-      font-size:.72rem!important;
-      letter-spacing:.20em!important;
-      font-weight:900!important;
-    }
-
-    html body .lp-page-hero .container.lp-page-grid .lp-page-mark{
-      display:flex!important;
-      align-items:center!important;
-      justify-content:center!important;
-      width:min(100%,820px)!important;
-      max-width:820px!important;
-      min-width:0!important;
-      height:auto!important;
-      margin:0 auto 42px!important;
-      padding:0!important;
-      background:#004b3e!important;
-      background-image:none!important;
-      border:1px solid rgba(212,173,92,.68)!important;
-      border-radius:10px!important;
-      box-shadow:0 22px 48px rgba(0,0,0,.28)!important;
-      overflow:hidden!important;
-      color:inherit!important;
-      font-size:inherit!important;
-      line-height:normal!important;
-    }
-    html body .lp-page-hero .container.lp-page-grid .lp-page-mark img{
-      display:block!important;
-      position:static!important;
-      width:100%!important;
-      max-width:100%!important;
-      height:auto!important;
-      object-fit:contain!important;
-      object-position:center!important;
-      margin:0!important;
-      opacity:1!important;
-      visibility:visible!important;
-    }
-    .lp-page-mark>span,
-    .lp-page-mark>i{display:none!important}
-
-    /* Tecnologia + compromisso + atuação jurídica */
-    .lp-partnership-title{
-      display:grid!important;
-      grid-template-columns:minmax(0,1fr) 96px minmax(0,1fr)!important;
-      align-items:center!important;
-      gap:clamp(22px,3vw,46px)!important;
-      width:100%!important;
-      max-width:1040px!important;
-      margin:0 auto!important;
-      font-family:Georgia,"Times New Roman",serif!important;
-      font-weight:400!important;
-      line-height:1.02!important;
-      letter-spacing:-.035em!important;
-    }
-    .lp-partnership-side{
-      display:block;
-      font-size:clamp(2rem,3.15vw,3.65rem)!important;
-      line-height:1.02!important;
-      text-wrap:balance;
-    }
-    .lp-partnership-left{
-      text-align:right;
-      color:#f4efe7;
-    }
-    .lp-partnership-right{
-      text-align:left;
-      color:#f4efe7;
-    }
-    .lp-partnership-right em{
-      color:#d4ad5c!important;
-      font-style:italic;
-      font-weight:400;
-    }
-    .lp-partnership-handshake{
-      position:relative;
-      width:88px;
-      height:88px;
-      border:1px solid rgba(212,173,92,.72);
-      border-radius:50%;
-      display:grid;
-      place-items:center;
-      justify-self:center;
-      background:rgba(212,173,92,.07);
-      box-shadow:0 14px 32px rgba(0,0,0,.2), inset 0 0 0 6px rgba(255,255,255,.018);
-    }
-    .lp-partnership-handshake::before,
-    .lp-partnership-handshake::after{
-      content:"";
-      position:absolute;
-      top:50%;
-      width:clamp(12px,1.8vw,24px);
-      height:1px;
-      background:rgba(212,173,92,.58);
-    }
-    .lp-partnership-handshake::before{right:100%}
-    .lp-partnership-handshake::after{left:100%}
-    .lp-partnership-handshake svg{
-      width:48px;
-      height:48px;
-      fill:none;
-      stroke:#d4ad5c;
-      stroke-width:1.65;
-      stroke-linecap:round;
-      stroke-linejoin:round;
-    }
-
-    /* Caixa institucional centralizada abaixo da parceria */
-    html body .lp-page-hero .container.lp-page-grid .lp-page-lead{
-      display:block!important;
-      width:min(100%,820px)!important;
-      max-width:820px!important;
-      margin:42px auto 0!important;
-      padding:22px 28px!important;
-      border:1px solid rgba(212,173,92,.48)!important;
-      border-left:1px solid rgba(212,173,92,.48)!important;
-      background:rgba(0,0,0,.12)!important;
-      color:#d9dedb!important;
-      font-size:clamp(.96rem,1.15vw,1.08rem)!important;
-      line-height:1.72!important;
-      text-align:center!important;
-      box-shadow:0 16px 34px rgba(0,0,0,.14)!important;
-    }
-    html body .lp-page-hero .container.lp-page-grid .lp-page-lead strong{
-      color:#fff!important;
-    }
-
-    /* Melhor contraste do rótulo sobre o fundo dourado da seção */
-    .lp-services .eyebrow{
-      color:#174f43!important;
-      font-weight:900!important;
-      text-shadow:none!important;
-    }
-
-    @media(max-width:900px){
-      html body .lp-page-hero .container.lp-page-grid{
-        width:min(calc(100% - 40px),820px)!important;
-      }
-      .lp-partnership-title{
-        grid-template-columns:minmax(0,1fr) 78px minmax(0,1fr)!important;
-        gap:18px!important;
-      }
-      .lp-partnership-handshake{width:72px;height:72px}
-      .lp-partnership-handshake svg{width:40px;height:40px}
-      .lp-partnership-side{font-size:clamp(1.8rem,4.6vw,2.8rem)!important}
-    }
-
-    @media(max-width:760px){
-      html body .lp-page-hero .container.lp-page-grid{
-        width:calc(100% - 34px)!important;
-      }
-      html body .lp-page-hero .container.lp-page-grid .lp-page-mark{
-        width:100%!important;
-        margin-bottom:30px!important;
-      }
-      .lp-page-kicker{margin-bottom:16px!important}
-      .lp-partnership-title{
-        grid-template-columns:1fr!important;
-        gap:20px!important;
-      }
-      .lp-partnership-left,
-      .lp-partnership-right{
-        text-align:center;
-      }
-      .lp-partnership-side{
-        font-size:clamp(2rem,9vw,3.1rem)!important;
-      }
-      .lp-partnership-handshake{
-        width:70px;
-        height:70px;
-        margin:0 auto;
-      }
-      .lp-partnership-handshake::before,
-      .lp-partnership-handshake::after{display:none}
-      html body .lp-page-hero .container.lp-page-grid .lp-page-lead{
-        width:100%!important;
-        margin-top:32px!important;
-        padding:20px 18px!important;
-      }
-    }
+    html body .lp-page-hero .container.lp-page-grid{display:block!important;width:min(calc(100% - 64px),1180px)!important;margin-inline:auto!important}
+    .lp-hero-main{width:100%;max-width:1120px;margin:0 auto;text-align:center}
+    .lp-page-kicker{margin:0 auto 20px!important;text-align:center!important;color:#d4ad5c!important;font-size:.72rem!important;letter-spacing:.20em!important;font-weight:900!important}
+    html body .lp-page-hero .container.lp-page-grid .lp-page-mark{display:flex!important;align-items:center!important;justify-content:center!important;width:min(100%,820px)!important;max-width:820px!important;min-width:0!important;aspect-ratio:3/1!important;margin:0 auto 42px!important;padding:0!important;background:#004b3e!important;background-image:none!important;border:1px solid rgba(212,173,92,.68)!important;border-radius:10px!important;box-shadow:0 22px 48px rgba(0,0,0,.28)!important;overflow:hidden!important}
+    html body .lp-page-hero .container.lp-page-grid .lp-page-mark::before,html body .lp-page-hero .container.lp-page-grid .lp-page-mark::after{content:none!important;display:none!important}
+    html body .lp-page-hero .container.lp-page-grid .lp-page-mark img{display:block!important;position:static!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:cover!important;object-position:center!important;margin:0!important;opacity:1!important;visibility:visible!important}
+    .lp-partnership-title{display:grid!important;grid-template-columns:minmax(0,1fr) 96px minmax(0,1fr)!important;align-items:center!important;gap:clamp(22px,3vw,46px)!important;width:100%!important;max-width:1040px!important;margin:0 auto!important;font-family:Georgia,"Times New Roman",serif!important;font-weight:400!important;line-height:1.02!important;letter-spacing:-.035em!important}
+    .lp-partnership-side{display:block;font-size:clamp(2rem,3.15vw,3.65rem)!important;line-height:1.02!important;text-wrap:balance}.lp-partnership-left{text-align:right;color:#f4efe7}.lp-partnership-right{text-align:left;color:#f4efe7}.lp-partnership-right em{color:#d4ad5c!important;font-style:italic;font-weight:400}
+    .lp-partnership-handshake{position:relative;width:88px;height:88px;border:1px solid rgba(212,173,92,.72);border-radius:50%;display:grid;place-items:center;justify-self:center;background:rgba(212,173,92,.07);box-shadow:0 14px 32px rgba(0,0,0,.2),inset 0 0 0 6px rgba(255,255,255,.018)}
+    .lp-partnership-handshake::before,.lp-partnership-handshake::after{content:"";position:absolute;top:50%;width:clamp(12px,1.8vw,24px);height:1px;background:rgba(212,173,92,.58)}.lp-partnership-handshake::before{right:100%}.lp-partnership-handshake::after{left:100%}.lp-partnership-handshake svg{width:48px;height:48px;fill:none;stroke:#d4ad5c;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
+    html body .lp-page-hero .container.lp-page-grid .lp-page-lead{display:block!important;width:min(100%,820px)!important;max-width:820px!important;margin:42px auto 0!important;padding:22px 28px!important;border:1px solid rgba(212,173,92,.48)!important;background:rgba(0,0,0,.12)!important;color:#d9dedb!important;font-size:clamp(.96rem,1.15vw,1.08rem)!important;line-height:1.72!important;text-align:center!important;box-shadow:0 16px 34px rgba(0,0,0,.14)!important}html body .lp-page-hero .container.lp-page-grid .lp-page-lead strong{color:#fff!important}
+    .lp-services .eyebrow{color:#174f43!important;font-weight:900!important;text-shadow:none!important}
+    @media(max-width:900px){html body .lp-page-hero .container.lp-page-grid{width:min(calc(100% - 40px),820px)!important}.lp-partnership-title{grid-template-columns:minmax(0,1fr) 78px minmax(0,1fr)!important;gap:18px!important}.lp-partnership-handshake{width:72px;height:72px}.lp-partnership-handshake svg{width:40px;height:40px}.lp-partnership-side{font-size:clamp(1.8rem,4.6vw,2.8rem)!important}}
+    @media(max-width:760px){html body .lp-page-hero .container.lp-page-grid{width:calc(100% - 34px)!important}html body .lp-page-hero .container.lp-page-grid .lp-page-mark{width:100%!important;margin-bottom:30px!important}.lp-page-kicker{margin-bottom:16px!important}.lp-partnership-title{grid-template-columns:1fr!important;gap:20px!important}.lp-partnership-left,.lp-partnership-right{text-align:center}.lp-partnership-side{font-size:clamp(2rem,9vw,3.1rem)!important}.lp-partnership-handshake{width:70px;height:70px;margin:0 auto}.lp-partnership-handshake::before,.lp-partnership-handshake::after{display:none}html body .lp-page-hero .container.lp-page-grid .lp-page-lead{width:100%!important;margin-top:32px!important;padding:20px 18px!important}}
   </style>
   <title>LicitaPará | DMG | Advogados Associados</title>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
-
   <header class="site-header" id="topo">
     <div class="container nav-wrap">
-      <a class="brand" href="../" aria-label="DMG Advogados Associados - início">
-        <img src="../assets/images/dmg-monogram-black-transparent.png" alt="DMG" width="140" height="72">
-        <span class="brand-copy">Advogados<span>Associados</span></span>
-      </a>
-
-      <nav class="main-nav" id="menu-principal" aria-label="Navegação principal">
-        <a href="../">Início</a>
-        <a href="../quem-somos/">Quem somos</a>
-        <a href="../#atuacao">Áreas de atuação</a>
-        <a href="../#contato">Contato</a>
-        <a class="external-nav" href="./" aria-current="page">LicitaPará</a>
-        <a href="../area-do-cliente/" target="_blank" rel="noopener">Área do cliente</a>
-      </nav>
-
-      <div class="header-actions">
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-        </button>
-        <a class="icon-action lock" href="../area-do-cliente/" target="_blank" rel="noopener" aria-label="Área do Cliente">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
-        </a>
-        <a class="icon-action chat" href="https://wa.me/5592994986742" target="_blank" rel="noopener noreferrer" aria-label="Falar com a equipe pelo WhatsApp">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 11.6a8 8 0 0 1-11.8 7L4 20l1.4-4.1A8 8 0 1 1 20 11.6Z"/></svg>
-        </a>
-      </div>
+      <a class="brand" href="../" aria-label="DMG Advogados Associados - início"><img src="../assets/images/dmg-monogram-black-transparent.png" alt="DMG" width="140" height="72"><span class="brand-copy">Advogados<span>Associados</span></span></a>
+      <nav class="main-nav" id="menu-principal" aria-label="Navegação principal"><a href="../">Início</a><a href="../quem-somos/">Quem somos</a><a href="../#atuacao">Áreas de atuação</a><a href="../#contato">Contato</a><a class="external-nav" href="./" aria-current="page">LicitaPará</a><a href="../area-do-cliente/" target="_blank" rel="noopener">Área do cliente</a></nav>
+      <div class="header-actions"><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><a class="icon-action lock" href="../area-do-cliente/" target="_blank" rel="noopener" aria-label="Área do Cliente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></a><a class="icon-action chat" href="https://wa.me/5592994986742" target="_blank" rel="noopener noreferrer" aria-label="Falar com a equipe pelo WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 11.6a8 8 0 0 1-11.8 7L4 20l1.4-4.1A8 8 0 1 1 20 11.6Z"/></svg></a></div>
     </div>
   </header>
-
   <main id="conteudo">
-    <section class="lp-page-hero" aria-labelledby="lp-title">
-      <div class="container lp-page-grid">
-        <div class="lp-hero-main reveal reveal-left">
-          <p class="eyebrow lp-page-kicker">Licitações e contratos públicos</p>
-          <div class="lp-page-mark">
-            <img src="../assets/images/licitapara-oficial-1600.webp" alt="LicitaPará — Inteligência em Licitações" width="1600" height="533" decoding="async">
-          </div>
-
-          <h1 id="lp-title" class="lp-partnership-title">
-            <span class="lp-partnership-side lp-partnership-left">Tecnologia e conteúdo de um lado</span>
-            <span class="lp-partnership-handshake" aria-hidden="true">
-              <svg viewBox="0 0 64 64" aria-hidden="true">
-                <path d="M7 25l9-8 10 5-8 10-5 2-6-9Z"/>
-                <path d="M57 25l-9-8-10 5 8 10 5 2 6-9Z"/>
-                <path d="M18 32l9-8c2-2 5-2 7 0l4 4"/>
-                <path d="M46 32l-8-7"/>
-                <path d="M21 35l12 12c2 2 5 2 7 0l2-2"/>
-                <path d="M25 31l16 14c2 2 5 2 7 0 2-2 2-5 0-7l-11-10"/>
-                <path d="M16 34l5 5"/>
-                <path d="M48 34l-4 4"/>
-                <path d="M9 23l-4 4 9 11 4-4"/>
-                <path d="M55 23l4 4-9 11-4-4"/>
-              </svg>
-            </span>
-            <span class="lp-partnership-side lp-partnership-right"><em>Atuação jurídica</em> do outro</span>
-          </h1>
-
-          <p class="lp-page-lead reveal reveal-right"><strong>DMG | Advogados Associados</strong> atua como equipe jurídica responsável pelas demandas encaminhadas no âmbito da relação com o LicitaPará, oferecendo suporte técnico em licitações e contratos públicos.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="lp-info" aria-labelledby="o-que-e">
-      <div class="container lp-info-grid">
-        <div class="reveal reveal-left">
-          <p class="eyebrow">O que é o LicitaPará</p>
-          <h2 id="o-que-e">Uma porta de entrada para o universo das contratações públicas.</h2>
-        </div>
-        <div class="lp-info-copy reveal reveal-right">
-          <p>O LicitaPará é uma iniciativa voltada ao ambiente de licitações e contratos públicos. Sua proposta é aproximar empresas e interessados de informações, conteúdos e soluções relacionadas à participação em processos licitatórios.</p>
-          <p>Quando a situação exige análise jurídica, elaboração de medida técnica ou atuação profissional, a frente jurídica é conduzida pela DMG | Advogados Associados.</p>
-          <div class="lp-note"><strong>Importante:</strong> a DMG não se apresenta como criadora do LicitaPará. O escritório atua como equipe jurídica responsável pelas demandas jurídicas relacionadas à parceria.</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="lp-role" aria-labelledby="como-funciona">
-      <div class="container">
-        <div class="lp-role-head reveal">
-          <div>
-            <p class="eyebrow">Como funciona a relação</p>
-            <h2 id="como-funciona">Cada parte cumpre uma função clara.</h2>
-          </div>
-          <p>A estrutura foi pensada para separar o ambiente informativo e operacional da atuação jurídica propriamente dita, mantendo clareza sobre a responsabilidade de cada frente.</p>
-        </div>
-
-        <div class="lp-steps">
-          <article class="lp-step reveal"><small>01</small><div><h3>LicitaPará</h3><p>Apresenta o ambiente especializado em licitações e contratos públicos e conecta o usuário aos conteúdos e caminhos disponíveis.</p></div></article>
-          <article class="lp-step reveal"><small>02</small><div><h3>Análise jurídica</h3><p>Quando há necessidade de avaliação técnica, a DMG examina o caso concreto, os documentos e os riscos jurídicos envolvidos.</p></div></article>
-          <article class="lp-step reveal"><small>03</small><div><h3>Atuação da DMG</h3><p>Se cabível, o escritório conduz a medida jurídica adequada, sempre de acordo com as circunstâncias e a legislação aplicável.</p></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="lp-services" aria-labelledby="atuacao-licitacoes">
-      <div class="container">
-        <div class="lp-services-head reveal">
-          <div><p class="eyebrow">Atuação jurídica</p><h2 id="atuacao-licitacoes">A DMG na frente jurídica do LicitaPará.</h2></div>
-          <p>A atuação pode envolver diferentes medidas administrativas e judiciais, conforme o problema apresentado e a etapa do procedimento licitatório.</p>
-        </div>
-        <div class="lp-service-grid">
-          <article class="lp-service reveal"><span>01</span><h3>Impugnações de editais</h3><p>Análise de cláusulas, exigências, critérios e eventuais ilegalidades ou restrições indevidas à competitividade.</p></article>
-          <article class="lp-service reveal"><span>02</span><h3>Recursos administrativos</h3><p>Estruturação e acompanhamento de recursos, contrarrazões e demais manifestações dentro do procedimento licitatório.</p></article>
-          <article class="lp-service reveal"><span>03</span><h3>Medidas judiciais</h3><p>Atuação judicial quando necessária para proteção de direitos relacionados ao certame, à contratação ou à execução contratual.</p></article>
-          <article class="lp-service reveal"><span>04</span><h3>Órgãos de controle</h3><p>Análise e atuação em matérias submetidas a órgãos de controle, inclusive questões relacionadas a Tribunais de Contas.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="lp-final" aria-labelledby="acessar-licitapara">
-      <div class="container lp-final-grid">
-        <div class="lp-final-copy reveal reveal-left">
-          <p class="eyebrow">Acessar a plataforma</p>
-          <h2 id="acessar-licitapara">Agora você pode seguir para o LicitaPará.</h2>
-          <p>O botão abaixo abre o site do LicitaPará em uma nova aba. Se a sua necessidade for especificamente jurídica, você também pode falar diretamente com a equipe da DMG.</p>
-          <p class="lp-legal">Conteúdo de caráter informativo. A análise jurídica depende das circunstâncias concretas de cada caso e não há promessa de resultado.</p>
-        </div>
-        <div class="lp-final-actions reveal reveal-right">
-          <a class="button button-accent" href="https://www.licitapara.com.br/" target="_blank" rel="noopener noreferrer">Ir para www.licitapara.com.br <span aria-hidden="true">↗</span></a>
-          <a class="button button-outline" href="https://wa.me/5592994986742" target="_blank" rel="noopener noreferrer">Falar com a DMG</a>
-        </div>
-      </div>
-    </section>
+    <section class="lp-page-hero" aria-labelledby="lp-title"><div class="container lp-page-grid"><div class="lp-hero-main reveal reveal-left"><p class="eyebrow lp-page-kicker">Licitações e contratos públicos</p><div class="lp-page-mark"><img src="../assets/images/licitapara-oficial-1600.webp?v=2" alt="LicitaPará — Inteligência em Licitações" width="900" height="300" decoding="async"></div><h1 id="lp-title" class="lp-partnership-title"><span class="lp-partnership-side lp-partnership-left">Tecnologia e conteúdo de um lado</span><span class="lp-partnership-handshake" aria-hidden="true"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M7 25l9-8 10 5-8 10-5 2-6-9Z"/><path d="M57 25l-9-8-10 5 8 10 5 2 6-9Z"/><path d="M18 32l9-8c2-2 5-2 7 0l4 4"/><path d="M46 32l-8-7"/><path d="M21 35l12 12c2 2 5 2 7 0l2-2"/><path d="M25 31l16 14c2 2 5 2 7 0 2-2 2-5 0-7l-11-10"/><path d="M16 34l5 5"/><path d="M48 34l-4 4"/><path d="M9 23l-4 4 9 11 4-4"/><path d="M55 23l4 4-9 11-4-4"/></svg></span><span class="lp-partnership-side lp-partnership-right"><em>Atuação jurídica</em> do outro</span></h1><p class="lp-page-lead reveal reveal-right"><strong>DMG | Advogados Associados</strong> atua como equipe jurídica responsável pelas demandas encaminhadas no âmbito da relação com o LicitaPará, oferecendo suporte técnico em licitações e contratos públicos.</p></div></div></section>
+    <section class="lp-info" aria-labelledby="o-que-e"><div class="container lp-info-grid"><div class="reveal reveal-left"><p class="eyebrow">O que é o LicitaPará</p><h2 id="o-que-e">Uma porta de entrada para o universo das contratações públicas.</h2></div><div class="lp-info-copy reveal reveal-right"><p>O LicitaPará é uma iniciativa voltada ao ambiente de licitações e contratos públicos. Sua proposta é aproximar empresas e interessados de informações, conteúdos e soluções relacionadas à participação em processos licitatórios.</p><p>Quando a situação exige análise jurídica, elaboração de medida técnica ou atuação profissional, a frente jurídica é conduzida pela DMG | Advogados Associados.</p><div class="lp-note"><strong>Importante:</strong> a DMG não se apresenta como criadora do LicitaPará. O escritório atua como equipe jurídica responsável pelas demandas jurídicas relacionadas à parceria.</div></div></div></section>
+    <section class="lp-role" aria-labelledby="como-funciona"><div class="container"><div class="lp-role-head reveal"><div><p class="eyebrow">Como funciona a relação</p><h2 id="como-funciona">Cada parte cumpre uma função clara.</h2></div><p>A estrutura foi pensada para separar o ambiente informativo e operacional da atuação jurídica propriamente dita, mantendo clareza sobre a responsabilidade de cada frente.</p></div><div class="lp-steps"><article class="lp-step reveal"><small>01</small><div><h3>LicitaPará</h3><p>Apresenta o ambiente especializado em licitações e contratos públicos e conecta o usuário aos conteúdos e caminhos disponíveis.</p></div></article><article class="lp-step reveal"><small>02</small><div><h3>Análise jurídica</h3><p>Quando há necessidade de avaliação técnica, a DMG examina o caso concreto, os documentos e os riscos jurídicos envolvidos.</p></div></article><article class="lp-step reveal"><small>03</small><div><h3>Atuação da DMG</h3><p>Se cabível, o escritório conduz a medida jurídica adequada, sempre de acordo com as circunstâncias e a legislação aplicável.</p></div></article></div></div></section>
+    <section class="lp-services" aria-labelledby="atuacao-licitacoes"><div class="container"><div class="lp-services-head reveal"><div><p class="eyebrow">Atuação jurídica</p><h2 id="atuacao-licitacoes">A DMG na frente jurídica do LicitaPará.</h2></div><p>A atuação pode envolver diferentes medidas administrativas e judiciais, conforme o problema apresentado e a etapa do procedimento licitatório.</p></div><div class="lp-service-grid"><article class="lp-service reveal"><span>01</span><h3>Impugnações de editais</h3><p>Análise de cláusulas, exigências, critérios e eventuais ilegalidades ou restrições indevidas à competitividade.</p></article><article class="lp-service reveal"><span>02</span><h3>Recursos administrativos</h3><p>Estruturação e acompanhamento de recursos, contrarrazões e demais manifestações dentro do procedimento licitatório.</p></article><article class="lp-service reveal"><span>03</span><h3>Medidas judiciais</h3><p>Atuação judicial quando necessária para proteção de direitos relacionados ao certame, à contratação ou à execução contratual.</p></article><article class="lp-service reveal"><span>04</span><h3>Órgãos de controle</h3><p>Análise e atuação em matérias submetidas a órgãos de controle, inclusive questões relacionadas a Tribunais de Contas.</p></article></div></div></section>
+    <section class="lp-final" aria-labelledby="acessar-licitapara"><div class="container lp-final-grid"><div class="lp-final-copy reveal reveal-left"><p class="eyebrow">Acessar a plataforma</p><h2 id="acessar-licitapara">Agora você pode seguir para o LicitaPará.</h2><p>O botão abaixo abre o site do LicitaPará em uma nova aba. Se a sua necessidade for especificamente jurídica, você também pode falar diretamente com a equipe da DMG.</p><p class="lp-legal">Conteúdo de caráter informativo. A análise jurídica depende das circunstâncias concretas de cada caso e não há promessa de resultado.</p></div><div class="lp-final-actions reveal reveal-right"><a class="button button-accent" href="https://www.licitapara.com.br/" target="_blank" rel="noopener noreferrer">Ir para LicitaPará</a><a class="button button-outline" href="https://wa.me/5592994986742" target="_blank" rel="noopener noreferrer">Falar com a DMG</a></div></div></section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div><img class="footer-logo" src="../assets/images/dmg-monogram-black-transparent.png" alt="DMG"><strong>DMG | Advogados Associados</strong><p>Advocacia responsável e estratégica no Norte do Brasil.</p></div>
-      <nav class="footer-nav" aria-label="Navegação do rodapé">
-        <a href="../quem-somos/">Quem somos</a>
-        <a href="../#atuacao">Áreas de atuação</a>
-        <a class="licita-footer" href="./">LicitaPará</a>
-        <a href="../area-do-cliente/" target="_blank" rel="noopener">Área do cliente</a>
-        <a href="../#contato">Contato</a>
-      </nav>
-      <div class="footer-legal">
-        <p>Rua Silva Ramos, 89, Centro, Manaus - AM, 69010-180.</p>
-        <p>+55 (92) 99498-6742 · @dmgjuridico</p>
-        <p>Conteúdo de caráter exclusivamente informativo, em observância às normas éticas aplicáveis à advocacia.</p>
-      </div>
-    </div>
-  </footer>
-
+  <footer class="site-footer"><div class="container footer-grid"><div><img class="footer-logo" src="../assets/images/dmg-monogram-black-transparent.png" alt="DMG"><strong>DMG | Advogados Associados</strong><p>Advocacia responsável e estratégica no Norte do Brasil.</p></div><nav class="footer-nav" aria-label="Navegação do rodapé"><a href="../quem-somos/">Quem somos</a><a href="../#atuacao">Áreas de atuação</a><a class="licita-footer" href="./">LicitaPará</a><a href="../area-do-cliente/" target="_blank" rel="noopener">Área do cliente</a><a href="../#contato">Contato</a></nav><div class="footer-legal"><p>Rua Silva Ramos, 89, Centro, Manaus - AM, 69010-180.</p><p>+55 (92) 99498-6742 · @dmgjuridico</p><p>Conteúdo de caráter exclusivamente informativo, em observância às normas éticas aplicáveis à advocacia.</p></div></div></footer>
   <a class="whatsapp-float" href="https://wa.me/5592994986742" target="_blank" rel="noopener noreferrer" aria-label="Falar com a DMG pelo WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 11.6a8 8 0 0 1-11.8 7L4 20l1.4-4.1A8 8 0 1 1 20 11.6Z"/></svg></a>
-
   <script src="../assets/js/site.js" defer></script>
 </body>
 </html>
