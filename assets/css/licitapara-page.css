@@ -9,3 +9,13 @@ html body .lp-page-hero .container.lp-page-grid .lp-page-mark img{display:block!
 .lp-final-actions .button-accent{font-size:0!important}
 .lp-final-actions .button-accent::before{content:"Ir para LicitaPará";font-size:1rem;line-height:1.2;font-weight:800;letter-spacing:0}
 .lp-final-actions .button-accent span{display:none!important}
+
+/* Texto informativo: alinhamento uniforme sem alterar o restante da página. */
+html body main#conteudo .lp-info .container.lp-info-grid .lp-info-copy p,
+html body main#conteudo .lp-info .container.lp-info-grid .lp-info-copy .lp-note{
+  text-align:justify!important;
+  text-align-last:left!important;
+  text-justify:inter-word!important;
+  hyphens:auto!important;
+  -webkit-hyphens:auto!important;
+}
