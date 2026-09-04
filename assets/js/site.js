@@ -1,19 +1,30 @@
 const menuButton = document.querySelector('.menu-toggle');
 const menu = document.querySelector('.main-nav');
 
+function closeMenu() {
+  if (!menuButton || !menu) return;
+  menu.classList.remove('open');
+  menuButton.setAttribute('aria-expanded', 'false');
+  menuButton.setAttribute('aria-label', 'Abrir menu');
+  document.body.classList.remove('menu-open');
+}
+
 if (menuButton && menu) {
   menuButton.addEventListener('click', () => {
     const isOpen = menu.classList.toggle('open');
     menuButton.setAttribute('aria-expanded', String(isOpen));
     menuButton.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+    document.body.classList.toggle('menu-open', isOpen);
   });
 
-  menu.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      menu.classList.remove('open');
-      menuButton.setAttribute('aria-expanded', 'false');
-      menuButton.setAttribute('aria-label', 'Abrir menu');
-    });
+  menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeMenu();
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 980) closeMenu();
   });
 }
 
@@ -29,7 +40,7 @@ if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-mot
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.12, rootMargin: '0px 0px -20px' });
 
   revealItems.forEach((item) => observer.observe(item));
 } else {
