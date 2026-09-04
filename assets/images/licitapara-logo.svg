@@ -1,45 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 682" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 533" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet">
   <title id="title">LicitaPará</title>
   <desc id="desc">LicitaPará — Inteligência em Licitações</desc>
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#075946"/>
-      <stop offset="0.55" stop-color="#004438"/>
-      <stop offset="1" stop-color="#002f29"/>
-    </linearGradient>
-    <radialGradient id="glow" cx="50%" cy="100%" r="70%">
-      <stop offset="0" stop-color="#16b561" stop-opacity=".68"/>
-      <stop offset=".38" stop-color="#0a7650" stop-opacity=".24"/>
-      <stop offset="1" stop-color="#00372f" stop-opacity="0"/>
-    </radialGradient>
-    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
-      <circle cx="3" cy="3" r="2.2" fill="#18b86f" opacity=".33"/>
-    </pattern>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="13" stdDeviation="12" flood-color="#001f19" flood-opacity=".62"/>
-    </filter>
-  </defs>
-
-  <rect width="2048" height="682" fill="url(#bg)"/>
-  <rect width="2048" height="682" fill="url(#glow)"/>
-
-  <path d="M0 0h300c-72 86-141 184-209 309C50 383 19 433 0 459Z" fill="#10a867" opacity=".16"/>
-  <path d="M2048 333c-188 101-378 209-568 349h568Z" fill="#0ab45f" opacity=".08"/>
-  <rect x="1685" y="105" width="290" height="206" fill="url(#dots)" opacity=".78"/>
-  <rect x="0" y="520" width="325" height="162" fill="url(#dots)" opacity=".72"/>
-
-  <g fill="none" stroke-linecap="round">
-    <path d="M0 500c240-10 389 14 569 70 192 60 351 111 533 101 250-14 434-103 628-197 111-54 212-92 318-107" stroke="#17b970" stroke-opacity=".48" stroke-width="2"/>
-    <path d="M0 528c230-12 378 9 557 58 204 56 371 96 548 83 236-17 419-97 611-184 121-55 220-88 332-103" stroke="#17b970" stroke-opacity=".26" stroke-width="2"/>
-    <path d="M0 552c225-9 367 10 542 52 211 51 379 83 559 67 224-20 408-90 595-168 131-55 239-84 352-94" stroke="#17b970" stroke-opacity=".16" stroke-width="2"/>
-  </g>
-
-  <g transform="translate(250 165) scale(1.02)" filter="url(#shadow)">
-    <path d="M93 34 126 20 158 30 169 13 194 20 203 45 229 47 249 70 266 55 287 67 304 61 326 81 353 83 360 108 351 130 337 151 342 177 325 201 330 226 311 244 293 278 259 290 223 287 195 276 165 276 145 260 127 232 111 211 116 188 105 167 111 144 97 122 103 96 89 73Z" fill="none" stroke="#ffffff" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/>
-  </g>
-
-  <g filter="url(#shadow)">
-    <text x="650" y="360" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="190" font-weight="800" letter-spacing="-9">LicitaPará</text>
-    <text x="671" y="463" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="47" font-weight="700" letter-spacing="18">INTELIGÊNCIA EM LICITAÇÕES</text>
-  </g>
+  <image href="licitapara-home-oficial.webp" x="0" y="0" width="1600" height="533" preserveAspectRatio="xMidYMid meet"/>
 </svg>
