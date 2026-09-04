@@ -6,7 +6,7 @@ if (siteScript) {
   if (!document.querySelector('link[data-dmg-final-tuning]')) {
     const finalTuning = document.createElement('link');
     finalTuning.rel = 'stylesheet';
-    finalTuning.href = new URL('assets/css/final-tuning.css', rootUrl).href;
+    finalTuning.href = new URL('assets/css/final-tuning.css?v=20260904-2040', rootUrl).href;
     finalTuning.dataset.dmgFinalTuning = 'true';
     document.head.appendChild(finalTuning);
   }
@@ -133,21 +133,159 @@ if (licitaInfoEyebrow && licitaInfoEyebrow.textContent.trim().toLowerCase() === 
   licitaInfoEyebrow.textContent = 'O que é o LicitaPará?';
 }
 
-/* Marca LicitaPará da HOME: arquivo externo leve, sem base64 e sem interferir na página específica. */
+/* =========================================================
+   HOME — LicitaPará definitivo
+   Usa a imagem oficial como IMG real e aplica o layout depois
+   de qualquer CSS antigo/inline, evitando retângulo vazio.
+   ========================================================= */
 if (siteScript) {
   const scriptUrl = new URL(siteScript.src, document.baseURI);
   const rootUrl = scriptUrl.href.replace(/assets\/js\/site\.js(?:\?.*)?$/, '');
+  const homeLicita = document.querySelector('.licitapara-section');
 
-  document.querySelectorAll('.lp-signature').forEach((brand) => {
-    brand.innerHTML = '';
-    brand.removeAttribute('aria-hidden');
-    brand.classList.add('lp-official-brand');
-    const image = document.createElement('img');
-    image.src = new URL('assets/images/licitapara-logo.svg', rootUrl).href;
-    image.alt = 'LicitaPará — Inteligência em Licitações';
-    image.className = 'lp-brand-image';
-    brand.appendChild(image);
-  });
+  if (homeLicita) {
+    const brand = homeLicita.querySelector('.lp-signature');
+    if (brand) {
+      brand.innerHTML = '';
+      brand.removeAttribute('aria-hidden');
+      brand.classList.add('lp-official-brand', 'lp-home-brand-fixed');
+
+      const image = document.createElement('img');
+      image.src = new URL('assets/images/licitapara-home-oficial.webp?v=20260904-2040', rootUrl).href;
+      image.alt = 'LicitaPará — Inteligência em Licitações';
+      image.width = 1600;
+      image.height = 533;
+      image.className = 'lp-home-official-image';
+      brand.appendChild(image);
+    }
+
+    if (!document.querySelector('style[data-dmg-licitapara-home-fix]')) {
+      const homeFix = document.createElement('style');
+      homeFix.dataset.dmgLicitaparaHomeFix = 'true';
+      homeFix.textContent = `
+        html body .licitapara-section .container.licitapara-grid{
+          display:grid !important;
+          grid-template-columns:minmax(0,1.12fr) minmax(340px,.78fr) !important;
+          grid-template-areas:
+            "copy brand"
+            "copy link" !important;
+          column-gap:clamp(48px,6vw,86px) !important;
+          row-gap:24px !important;
+          align-items:center !important;
+          min-height:0 !important;
+          padding-right:0 !important;
+        }
+        html body .licitapara-section .licitapara-copy{
+          grid-area:copy !important;
+          position:relative !important;
+          width:100% !important;
+          max-width:680px !important;
+          margin:0 !important;
+          padding:0 !important;
+          align-self:center !important;
+          text-align:left !important;
+        }
+        html body .licitapara-section .licitapara-copy .eyebrow,
+        html body .licitapara-section .licitapara-copy h2,
+        html body .licitapara-section .licitapara-copy p{
+          text-align:left !important;
+          margin-left:0 !important;
+          margin-right:0 !important;
+        }
+        html body .licitapara-section .licitapara-copy .eyebrow{
+          margin-bottom:18px !important;
+        }
+        html body .licitapara-section .licitapara-copy h2{
+          max-width:650px !important;
+          margin-top:0 !important;
+          margin-bottom:24px !important;
+        }
+        html body .licitapara-section .licitapara-copy p{
+          max-width:640px !important;
+          line-height:1.7 !important;
+        }
+        html body .licitapara-section .lp-signature.lp-home-brand-fixed{
+          grid-area:brand !important;
+          position:relative !important;
+          top:auto !important;
+          right:auto !important;
+          bottom:auto !important;
+          left:auto !important;
+          display:block !important;
+          width:100% !important;
+          max-width:420px !important;
+          min-width:0 !important;
+          height:auto !important;
+          aspect-ratio:1600 / 533 !important;
+          margin:0 !important;
+          padding:0 !important;
+          justify-self:end !important;
+          overflow:hidden !important;
+          background:none !important;
+          background-image:none !important;
+          border:1px solid rgba(212,173,92,.72) !important;
+          border-radius:10px !important;
+          box-shadow:0 22px 48px rgba(0,0,0,.2) !important;
+          transform:none !important;
+          font-size:0 !important;
+          line-height:0 !important;
+        }
+        html body .licitapara-section .lp-signature.lp-home-brand-fixed > img.lp-home-official-image{
+          display:block !important;
+          visibility:visible !important;
+          opacity:1 !important;
+          position:static !important;
+          width:100% !important;
+          max-width:none !important;
+          height:100% !important;
+          max-height:none !important;
+          object-fit:cover !important;
+          object-position:center !important;
+          margin:0 !important;
+          padding:0 !important;
+          pointer-events:auto !important;
+        }
+        html body .licitapara-section .lp-signature.lp-home-brand-fixed::before,
+        html body .licitapara-section .lp-signature.lp-home-brand-fixed::after{
+          content:none !important;
+          display:none !important;
+        }
+        html body .licitapara-section .licitapara-link{
+          grid-area:link !important;
+          position:relative !important;
+          top:auto !important;
+          right:auto !important;
+          bottom:auto !important;
+          left:auto !important;
+          width:100% !important;
+          max-width:420px !important;
+          margin:0 !important;
+          justify-self:end !important;
+          transform:none !important;
+        }
+        @media(max-width:980px){
+          html body .licitapara-section .container.licitapara-grid{
+            grid-template-columns:1fr !important;
+            grid-template-areas:
+              "brand"
+              "copy"
+              "link" !important;
+            gap:30px !important;
+          }
+          html body .licitapara-section .lp-signature.lp-home-brand-fixed,
+          html body .licitapara-section .licitapara-link{
+            justify-self:start !important;
+            width:min(100%,520px) !important;
+            max-width:520px !important;
+          }
+          html body .licitapara-section .licitapara-copy{
+            max-width:none !important;
+          }
+        }
+      `;
+      document.head.appendChild(homeFix);
+    }
+  }
 }
 
 const revealItems = document.querySelectorAll('.reveal');
