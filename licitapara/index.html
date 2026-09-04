@@ -40,6 +40,71 @@
     .lp-page-mark>span,
     .lp-page-mark>i{display:none!important}
 
+    /* Hero — tecnologia + compromisso + atuação jurídica */
+    .lp-partnership-title{
+      display:grid!important;
+      grid-template-columns:minmax(0,1fr) 118px minmax(0,1fr)!important;
+      align-items:center!important;
+      gap:clamp(24px,3.4vw,54px)!important;
+      width:100%!important;
+      max-width:none!important;
+      margin:0!important;
+      font-family:Georgia,"Times New Roman",serif!important;
+      font-weight:400!important;
+      line-height:.98!important;
+      letter-spacing:-.045em!important;
+    }
+    .lp-partnership-side{
+      display:block;
+      font-size:clamp(2.65rem,4.7vw,5.7rem)!important;
+      line-height:.98!important;
+    }
+    .lp-partnership-left{
+      text-align:left;
+      color:#f4efe7;
+    }
+    .lp-partnership-right{
+      text-align:right;
+      color:#f4efe7;
+    }
+    .lp-partnership-right em{
+      color:#d4ad5c!important;
+      font-style:italic;
+      font-weight:400;
+    }
+    .lp-partnership-handshake{
+      position:relative;
+      width:108px;
+      height:108px;
+      border:1px solid rgba(212,173,92,.72);
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      justify-self:center;
+      background:rgba(212,173,92,.07);
+      box-shadow:0 16px 38px rgba(0,0,0,.2), inset 0 0 0 7px rgba(255,255,255,.018);
+    }
+    .lp-partnership-handshake::before,
+    .lp-partnership-handshake::after{
+      content:"";
+      position:absolute;
+      top:50%;
+      width:clamp(14px,2vw,28px);
+      height:1px;
+      background:rgba(212,173,92,.58);
+    }
+    .lp-partnership-handshake::before{right:100%}
+    .lp-partnership-handshake::after{left:100%}
+    .lp-partnership-handshake svg{
+      width:58px;
+      height:58px;
+      fill:none;
+      stroke:#d4ad5c;
+      stroke-width:1.65;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+    }
+
     /* Melhor contraste do rótulo sobre o fundo dourado da seção */
     .lp-services .eyebrow{
       color:#174f43!important;
@@ -47,8 +112,26 @@
       text-shadow:none!important;
     }
 
+    @media(max-width:900px){
+      .lp-partnership-title{
+        grid-template-columns:minmax(0,1fr) 88px minmax(0,1fr)!important;
+        gap:20px!important;
+      }
+      .lp-partnership-handshake{width:82px;height:82px}
+      .lp-partnership-handshake svg{width:46px;height:46px}
+      .lp-partnership-side{font-size:clamp(2.15rem,5.5vw,3.7rem)!important}
+    }
     @media(max-width:760px){
       .lp-page-mark{width:min(100%,500px)!important;padding:11px 13px!important;margin-bottom:24px!important}
+      .lp-partnership-title{
+        grid-template-columns:1fr!important;
+        gap:22px!important;
+      }
+      .lp-partnership-left,
+      .lp-partnership-right{text-align:center}
+      .lp-partnership-handshake{width:78px;height:78px;margin:2px auto}
+      .lp-partnership-handshake::before,
+      .lp-partnership-handshake::after{display:none}
     }
   </style>
   <title>LicitaPará | DMG | Advogados Associados</title>
@@ -94,7 +177,24 @@
             <img src="../assets/images/licitapara-logo.svg" alt="LicitaPará — Inteligência em Licitações" width="570" height="143">
           </div>
           <p class="eyebrow">Licitações e contratos públicos</p>
-          <h1 id="lp-title">Tecnologia e conteúdo de um lado. <em>Atuação jurídica</em> do outro.</h1>
+          <h1 id="lp-title" class="lp-partnership-title">
+            <span class="lp-partnership-side lp-partnership-left">Tecnologia e conteúdo de um lado</span>
+            <span class="lp-partnership-handshake" aria-hidden="true">
+              <svg viewBox="0 0 64 64" aria-hidden="true">
+                <path d="M7 25l9-8 10 5-8 10-5 2-6-9Z"/>
+                <path d="M57 25l-9-8-10 5 8 10 5 2 6-9Z"/>
+                <path d="M18 32l9-8c2-2 5-2 7 0l4 4"/>
+                <path d="M46 32l-8-7"/>
+                <path d="M21 35l12 12c2 2 5 2 7 0l2-2"/>
+                <path d="M25 31l16 14c2 2 5 2 7 0 2-2 2-5 0-7l-11-10"/>
+                <path d="M16 34l5 5"/>
+                <path d="M48 34l-4 4"/>
+                <path d="M9 23l-4 4 9 11 4-4"/>
+                <path d="M55 23l4 4-9 11-4-4"/>
+              </svg>
+            </span>
+            <span class="lp-partnership-side lp-partnership-right"><em>Atuação jurídica</em> do outro</span>
+          </h1>
         </div>
         <p class="lp-page-lead reveal reveal-right"><strong>DMG | Advogados Associados</strong> atua como equipe jurídica responsável pelas demandas encaminhadas no âmbito da relação com o LicitaPará, oferecendo suporte técnico em licitações e contratos públicos.</p>
       </div>
