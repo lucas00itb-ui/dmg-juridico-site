@@ -55,6 +55,12 @@ if (menuButton && menu) {
 const year = document.querySelector('#ano');
 if (year) year.textContent = String(new Date().getFullYear());
 
+/* Página LicitaPará: rótulo com pontuação correta. */
+const licitaInfoEyebrow = document.querySelector('.lp-info .eyebrow');
+if (licitaInfoEyebrow && licitaInfoEyebrow.textContent.trim().toLowerCase() === 'o que é o licitapará') {
+  licitaInfoEyebrow.textContent = 'O que é o LicitaPará?';
+}
+
 /* Marca LicitaPará da HOME: arquivo externo leve, sem base64 e sem interferir na página específica. */
 if (siteScript) {
   const scriptUrl = new URL(siteScript.src, document.baseURI);
