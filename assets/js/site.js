@@ -63,3 +63,28 @@ if (officeValues.length) {
     });
   });
 }
+
+/*
+ * O menu e o bloco da home devem apresentar primeiro a página institucional
+ * da DMG sobre o LicitaPará. O redirecionamento externo fica apenas dentro
+ * dessa página, após a explicação da parceria e da atuação jurídica.
+ */
+const siteScript = document.querySelector('script[src*="assets/js/site.js"]');
+if (siteScript) {
+  const scriptUrl = new URL(siteScript.src, document.baseURI);
+  const rootUrl = scriptUrl.href.replace(/assets\/js\/site\.js(?:\?.*)?$/, '');
+  const internalLicitaUrl = new URL('licitapara/', rootUrl).href;
+  const currentPath = window.location.pathname.replace(/\/+$/, '');
+  const licitaPath = new URL(internalLicitaUrl).pathname.replace(/\/+$/, '');
+
+  if (currentPath !== licitaPath) {
+    document.querySelectorAll('.external-nav, .licita-footer, .licitapara-link').forEach((link) => {
+      if (link instanceof HTMLAnchorElement && link.href.includes('licitapara.com.br')) {
+        link.href = internalLicitaUrl;
+        link.removeAttribute('target');
+        link.removeAttribute('rel');
+        link.setAttribute('aria-label', 'Conhecer a parceria DMG e LicitaPará');
+      }
+    });
+  }
+}
