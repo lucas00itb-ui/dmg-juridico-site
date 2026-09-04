@@ -305,3 +305,81 @@
   .lp-signature{font-size:2.5rem}
   .licitapara-copy h2{font-size:clamp(2.85rem,13vw,4.1rem)}
 }
+
+/* =========================================================
+   LICITAPARÁ — marca em destaque (override de alta especificidade)
+   ========================================================= */
+html body .licitapara-section .container.licitapara-grid{
+  grid-template-columns:minmax(340px,.76fr) minmax(430px,1.1fr) minmax(220px,.54fr) !important;
+  gap:clamp(38px,4.5vw,68px) !important;
+}
+html body .licitapara-section .container.licitapara-grid .lp-signature{
+  width:360px !important;
+  height:104px !important;
+  min-width:360px !important;
+  background-color:#004f3f !important;
+  background-size:100% auto !important;
+  background-position:center !important;
+  border:1px solid rgba(196,147,60,.62) !important;
+  border-radius:4px !important;
+  box-shadow:0 18px 42px rgba(8,46,38,.18) !important;
+}
+html body .lp-page-hero .container.lp-page-grid .lp-page-mark{
+  width:430px !important;
+  height:122px !important;
+  min-width:430px !important;
+  margin-bottom:34px !important;
+  background-color:#004f3f !important;
+  background-size:100% auto !important;
+  background-position:center !important;
+  border:1px solid rgba(212,173,92,.7) !important;
+  border-radius:4px !important;
+  box-shadow:0 20px 48px rgba(0,0,0,.24) !important;
+}
+
+@media(max-width:1180px) and (min-width:921px){
+  html body .licitapara-section .container.licitapara-grid{
+    grid-template-columns:minmax(285px,.68fr) minmax(390px,1fr) minmax(205px,.5fr) !important;
+    gap:32px !important;
+  }
+  html body .licitapara-section .container.licitapara-grid .lp-signature{
+    width:300px !important;
+    height:90px !important;
+    min-width:300px !important;
+  }
+  html body .lp-page-hero .container.lp-page-grid .lp-page-mark{
+    width:365px !important;
+    height:104px !important;
+    min-width:365px !important;
+  }
+}
+
+@media(max-width:920px){
+  html body .licitapara-section .container.licitapara-grid{
+    grid-template-columns:1fr !important;
+  }
+  html body .licitapara-section .container.licitapara-grid .lp-signature{
+    width:320px !important;
+    height:92px !important;
+    min-width:320px !important;
+  }
+  html body .lp-page-hero .container.lp-page-grid .lp-page-mark{
+    width:360px !important;
+    height:103px !important;
+    min-width:360px !important;
+  }
+}
+
+@media(max-width:520px){
+  html body .licitapara-section .container.licitapara-grid .lp-signature{
+    width:270px !important;
+    height:79px !important;
+    min-width:270px !important;
+  }
+  html body .lp-page-hero .container.lp-page-grid .lp-page-mark{
+    width:292px !important;
+    height:84px !important;
+    min-width:292px !important;
+    margin-bottom:26px !important;
+  }
+}
