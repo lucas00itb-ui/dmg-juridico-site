@@ -3,8 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#08131f">
-  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#0b0b0a">
   <meta name="description" content="DMG | Advogados Associados. Advocacia responsável e estratégica no Norte do Brasil, com atuação nas áreas Cível, Trabalhista, Administrativa e em Licitações.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://dmgjuridico.com.br/">
@@ -26,6 +25,14 @@
     "url":"https://dmgjuridico.com.br/",
     "telephone":"+55-92-99498-6742",
     "areaServed":"Norte do Brasil",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Av. Djalma Batista, 1719 - Chapada",
+      "addressLocality":"Manaus",
+      "addressRegion":"AM",
+      "postalCode":"69050-010",
+      "addressCountry":"BR"
+    },
     "description":"Advocacia responsável e estratégica no Norte do Brasil, com atuação nas áreas Cível, Trabalhista, Administrativa e em Licitações.",
     "sameAs":["https://www.instagram.com/dmgjuridico/"]
   }
@@ -37,126 +44,169 @@
   <header class="site-header" id="topo">
     <div class="container nav-wrap">
       <a class="brand" href="#inicio" aria-label="DMG Advogados Associados - início">
-        <img src="assets/images/dmg-monogram-black-transparent.png" alt="DMG" width="140" height="72" style="width:124px;height:auto;max-height:64px;object-fit:contain;display:block">
+        <img src="assets/images/dmg-monogram-black-transparent.png" alt="DMG" width="140" height="72">
+        <span class="brand-copy">Advogados<span>Associados</span></span>
       </a>
-
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
-        <span></span><span></span><span></span>
-      </button>
 
       <nav class="main-nav" id="menu-principal" aria-label="Navegação principal">
         <a href="#inicio">Início</a>
         <a href="quem-somos/">Quem somos</a>
         <a href="#atuacao">Áreas de atuação</a>
         <a href="area-do-cliente/" target="_blank" rel="noopener">Área do cliente</a>
-        <a class="nav-cta" href="#contato">Contato</a>
+        <a href="#contato">Contato</a>
       </nav>
+
+      <div class="header-actions">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <a class="icon-action lock" href="area-do-cliente/" target="_blank" rel="noopener" aria-label="Área do Cliente">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+        </a>
+        <a class="icon-action chat" href="https://wa.me/5592994986742?text=Ol%C3%A1%2C%20equipe%20DMG%20Jur%C3%ADdico.%20Gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20inicial%20sobre%20uma%20quest%C3%A3o%20jur%C3%ADdica." target="_blank" rel="noopener noreferrer" aria-label="Falar com a equipe pelo WhatsApp">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 11.6a8 8 0 0 1-11.8 7L4 20l1.4-4.1A8 8 0 1 1 20 11.6Z"/></svg>
+        </a>
+      </div>
     </div>
   </header>
 
   <main id="conteudo">
     <section class="hero" id="inicio" aria-labelledby="hero-title">
-      <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
-      <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
       <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">DMG | ADVOGADOS ASSOCIADOS</p>
-          <h1 id="hero-title">Advocacia responsável e estratégica no <span>Norte do Brasil.</span></h1>
-          <p class="hero-text">Atuação nas áreas <strong>Cível, Trabalhista, Administrativa e em Licitações</strong>, com análise técnica, acompanhamento próximo e comunicação clara.</p>
+        <div class="hero-main reveal reveal-left">
+          <p class="eyebrow">Advocacia estratégica no Norte do Brasil</p>
+          <h1 id="hero-title">Clareza jurídica para decisões que <em>importam.</em></h1>
+          <p class="hero-intro">Análise responsável, estratégia bem definida e comunicação direta em cada etapa da sua demanda.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#atuacao">Conheça nossa atuação</a>
-            <a class="btn btn-secondary" href="https://wa.me/5592994986742?text=Ol%C3%A1%2C%20equipe%20DMG%20Jur%C3%ADdico.%20Gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20inicial%20sobre%20uma%20quest%C3%A3o%20jur%C3%ADdica." target="_blank" rel="noopener noreferrer">Falar com a equipe</a>
+            <a class="button button-light" href="https://wa.me/5592994986742?text=Ol%C3%A1%2C%20equipe%20DMG%20Jur%C3%ADdico.%20Gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20inicial%20sobre%20uma%20quest%C3%A3o%20jur%C3%ADdica." target="_blank" rel="noopener noreferrer">
+              Solicitar atendimento
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+            <a class="text-link" href="#atuacao">Conhecer a atuação <span aria-hidden="true">↘</span></a>
           </div>
-          <ul class="hero-points" aria-label="Compromissos do escritório">
-            <li>Estratégia jurídica</li>
-            <li>Segurança jurídica</li>
-            <li>Atuação personalizada</li>
-            <li>Acompanhamento responsável</li>
-          </ul>
         </div>
 
-        <aside class="hero-card reveal" aria-label="Apresentação institucional">
-          <div class="hero-monogram" aria-hidden="true">DMG</div>
-          <p>Técnica, responsabilidade profissional e compreensão do contexto antes da definição de cada estratégia jurídica.</p>
-          <div class="hero-card-line"></div>
-          <span>Atuação no Norte do Brasil</span>
+        <aside class="hero-aside reveal reveal-right" aria-label="Nosso compromisso">
+          <span class="aside-index">01 / 04</span>
+          <div>
+            <p class="aside-label">Nosso compromisso</p>
+            <p class="aside-statement">Compreender o contexto antes de indicar o caminho.</p>
+          </div>
+          <div class="aside-meta">
+            <span>Escuta atenta</span>
+            <span>Orientação objetiva</span>
+            <span>Acompanhamento próximo</span>
+          </div>
         </aside>
       </div>
     </section>
 
-    <section class="section section-dark" id="atuacao" aria-labelledby="atuacao-title">
+    <div class="trust-strip" aria-label="Princípios de atuação">
+      <span>Seriedade</span><i aria-hidden="true"></i>
+      <span>Clareza</span><i aria-hidden="true"></i>
+      <span>Estratégia</span><i aria-hidden="true"></i>
+      <span>Proximidade</span>
+    </div>
+
+    <section class="principles-section" aria-label="Forma de atuação">
+      <div class="principles-wrap">
+        <article class="principle reveal">
+          <small>01</small>
+          <div><h2>Estratégia Jurídica</h2><p>Planejamento da solução mais adequada para cada caso.</p></div>
+        </article>
+        <article class="principle reveal">
+          <small>02</small>
+          <div><h2>Segurança Jurídica</h2><p>Prevenção de riscos e atuação técnica responsável.</p></div>
+        </article>
+        <article class="principle reveal">
+          <small>03</small>
+          <div><h2>Atuação Personalizada</h2><p>Análise das particularidades de cada demanda.</p></div>
+        </article>
+        <article class="principle reveal">
+          <small>04</small>
+          <div><h2>Acompanhamento</h2><p>Comunicação próxima e orientação objetiva em cada etapa.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-light" id="atuacao" aria-labelledby="atuacao-title">
       <div class="container">
-        <div class="section-heading section-heading-dark reveal">
-          <p class="eyebrow">ÁREAS DE ATUAÇÃO</p>
-          <h2 id="atuacao-title">Análise jurídica com foco, contexto e estratégia.</h2>
-          <p>Cada demanda é examinada a partir dos fatos, documentos, riscos e alternativas juridicamente disponíveis.</p>
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">Áreas de atuação</p>
+            <h2 id="atuacao-title">Direção técnica para questões complexas.</h2>
+          </div>
+          <p>Cada demanda começa com uma leitura criteriosa dos fatos. A partir dela, construímos uma atuação compatível com o contexto, os riscos e os objetivos do cliente.</p>
         </div>
 
         <div class="practice-grid">
           <article class="practice-card reveal">
-            <span>01</span><h3>Cível</h3>
-            <p>Atuação consultiva e contenciosa em relações privadas, obrigações, contratos, responsabilidade civil, relações de consumo e questões patrimoniais.</p>
+            <div class="practice-top"><span>01</span><div class="practice-icon" aria-hidden="true">§</div></div>
+            <div><h3>Cível</h3><p>Contratos, obrigações, responsabilidade civil, relações de consumo e condução estratégica de demandas judiciais.</p></div>
           </article>
           <article class="practice-card reveal">
-            <span>02</span><h3>Trabalhista</h3>
-            <p>Orientação em relações de trabalho, análise preventiva e acompanhamento de demandas trabalhistas.</p>
+            <div class="practice-top"><span>02</span><div class="practice-icon" aria-hidden="true">◇</div></div>
+            <div><h3>Trabalhista</h3><p>Orientação preventiva e atuação em conflitos trabalhistas, com análise técnica e atendimento próximo.</p></div>
           </article>
           <article class="practice-card reveal">
-            <span>03</span><h3>Administrativa</h3>
-            <p>Direito Público, relações com a Administração, servidores públicos, questões ambientais e atuação administrativa estratégica.</p>
+            <div class="practice-top"><span>03</span><div class="practice-icon" aria-hidden="true">▥</div></div>
+            <div><h3>Administrativa</h3><p>Direito Público, servidores, relações com a Administração, questões ambientais e demandas perante a Fazenda Pública.</p></div>
           </article>
           <article class="practice-card reveal">
-            <span>04</span><h3>Licitações</h3>
-            <p>Assessoria em licitações e contratos administrativos, incluindo análise de editais, impugnações, recursos, medidas judiciais e atuação perante órgãos de controle.</p>
+            <div class="practice-top"><span>04</span><div class="practice-icon" aria-hidden="true">↗</div></div>
+            <div><h3>Licitações</h3><p>Análise de editais, impugnações, recursos, contratos administrativos, medidas judiciais e atuação perante órgãos de controle.</p></div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section client-section" id="cliente" aria-labelledby="cliente-title">
+    <section class="client-band" id="cliente" aria-labelledby="cliente-title">
       <div class="container client-grid">
-        <div class="section-heading reveal">
-          <p class="eyebrow eyebrow-dark">ÁREA DO CLIENTE</p>
-          <h2 id="cliente-title">Um acesso próprio para informações liberadas pelo escritório.</h2>
-          <p>A Área do Cliente será conectada ao Gestor Jurídico 360, mantendo o sistema operacional separado do site institucional.</p>
+        <div class="client-copy reveal reveal-left">
+          <p class="eyebrow">Área do Cliente</p>
+          <h2 id="cliente-title">Informações do seu caso em um ambiente próprio.</h2>
+          <p>A Área do Cliente é a porta de acesso ao Gestor Jurídico 360, mantendo o sistema operacional separado do site institucional.</p>
         </div>
-        <div class="client-card reveal">
-          <span class="status-dot" aria-hidden="true"></span>
-          <strong>Integração com o Gestor Jurídico 360</strong>
-          <p>A página de acesso já está preparada e será direcionada ao portal definitivo assim que o endereço da aplicação estiver consolidado.</p>
-          <a class="btn btn-secondary-dark" href="area-do-cliente/" target="_blank" rel="noopener">Acessar Área do Cliente</a>
+        <div class="client-access reveal reveal-right">
+          <strong>Portal integrado ao Gestor Jurídico 360</strong>
+          <p>Acesse o ambiente reservado destinado aos clientes da DMG.</p>
+          <a class="button button-outline" href="area-do-cliente/" target="_blank" rel="noopener">Acessar Área do Cliente <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
 
     <section class="section contact-section" id="contato" aria-labelledby="contato-title">
       <div class="container contact-grid">
-        <div class="contact-copy reveal">
-          <p class="eyebrow">CONTATO</p>
-          <h2 id="contato-title">Atendimento e canais oficiais em um só lugar.</h2>
-          <p>WhatsApp e Instagram concentrados em uma única área para tornar o site mais direto e reduzir informações repetidas.</p>
+        <div class="contact-copy reveal reveal-left">
+          <p class="eyebrow">Atendimento e canais oficiais</p>
+          <h2 id="contato-title">Um só lugar para falar com a DMG.</h2>
+          <p>Atendimento, redes sociais e endereço físico reunidos em uma área direta, sem repetir informações ao longo do site.</p>
+          <div class="contact-cta">
+            <a class="button button-accent" href="https://wa.me/5592994986742?text=Ol%C3%A1%2C%20equipe%20DMG%20Jur%C3%ADdico.%20Gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20inicial%20sobre%20uma%20quest%C3%A3o%20jur%C3%ADdica." target="_blank" rel="noopener noreferrer">Iniciar conversa no WhatsApp <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
-        <div class="contact-cards reveal">
-          <a class="contact-card active" href="https://wa.me/5592994986742?text=Ol%C3%A1%2C%20equipe%20DMG%20Jur%C3%ADdico.%20Gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20inicial%20sobre%20uma%20quest%C3%A3o%20jur%C3%ADdica." target="_blank" rel="noopener noreferrer">
-            <span>WhatsApp</span><strong>+55 (92) 99498-6742</strong><small>Iniciar atendimento ↗</small>
+
+        <div class="contact-list reveal reveal-right">
+          <a class="contact-row" href="https://wa.me/5592994986742" target="_blank" rel="noopener noreferrer">
+            <span>WhatsApp</span><strong>+55 (92) 99498-6742</strong><small>Atendimento direto ↗</small>
           </a>
-          <a class="contact-card active" href="https://www.instagram.com/dmgjuridico/" target="_blank" rel="noopener noreferrer">
-            <span>Instagram</span><strong>@dmgjuridico</strong><small>Abrir perfil oficial ↗</small>
+          <a class="contact-row" href="https://www.instagram.com/dmgjuridico/" target="_blank" rel="noopener noreferrer">
+            <span>Instagram</span><strong>@dmgjuridico</strong><small>Perfil oficial ↗</small>
           </a>
-          <a class="contact-card active" href="area-do-cliente/" target="_blank" rel="noopener">
-            <span>Clientes</span><strong>Área do Cliente</strong><small>Acessar ambiente reservado ↗</small>
-          </a>
+          <div class="contact-row address-row">
+            <span>Presencial</span>
+            <strong>Av. Djalma Batista, 1719 - Chapada<br>Manaus - AM, 69050-010</strong>
+            <small>Endereço físico para atendimentos presenciais, mediante agendamento.</small>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <a class="whatsapp-float" href="https://wa.me/5592994986742?text=Ol%C3%A1%2C%20equipe%20DMG%20Jur%C3%ADdico.%20Gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20inicial%20sobre%20uma%20quest%C3%A3o%20jur%C3%ADdica." target="_blank" rel="noopener noreferrer" aria-label="Falar com a DMG pelo WhatsApp">WhatsApp</a>
-
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <div class="footer-brand">DMG</div>
+        <img class="footer-logo" src="assets/images/dmg-monogram-black-transparent.png" alt="DMG">
         <strong>DMG | Advogados Associados</strong>
         <p>Advocacia responsável e estratégica no Norte do Brasil.</p>
       </div>
@@ -167,12 +217,16 @@
         <a href="#contato">Contato</a>
       </nav>
       <div class="footer-legal">
-        <p>+55 (92) 99498-6742 · @dmgjuridico</p>
+        <p>Av. Djalma Batista, 1719 - Chapada, Manaus - AM, 69050-010.</p>
         <p>Conteúdo de caráter exclusivamente informativo, em observância às normas éticas aplicáveis à advocacia.</p>
         <p>© <span id="ano"></span> DMG | Advogados Associados.</p>
       </div>
     </div>
   </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/5592994986742" target="_blank" rel="noopener noreferrer" aria-label="Falar com a DMG pelo WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 11.6a8 8 0 0 1-11.8 7L4 20l1.4-4.1A8 8 0 1 1 20 11.6Z"/></svg>
+  </a>
 
   <script src="assets/js/site.js" defer></script>
 </body>
