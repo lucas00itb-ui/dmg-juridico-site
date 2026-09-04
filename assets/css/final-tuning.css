@@ -94,6 +94,43 @@
   line-height:1.58 !important;
 }
 
+/* 4) Cabeçalho — contato mais à esquerda e Área do Cliente identificada */
+@media(min-width:821px){
+  /* desloca apenas o item Contato discretamente para a esquerda */
+  .main-nav a[href$="#contato"]{
+    transform:translateX(-10px);
+  }
+
+  /* o balão de atendimento fica mais próximo do menu e mais separado do acesso restrito */
+  .header-actions .chat{
+    transform:translateX(-12px);
+    margin-right:24px !important;
+  }
+
+  /* cadeado fica mais isolado à direita e ganha identificação textual */
+  .header-actions .lock{
+    width:auto !important;
+    min-width:154px;
+    padding:0 18px !important;
+    display:flex !important;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    white-space:nowrap;
+    margin-left:4px !important;
+    margin-right:-8px;
+    font-size:.84rem;
+    font-weight:700;
+    letter-spacing:.005em;
+  }
+  .header-actions .lock::after{
+    content:"Área do Cliente";
+  }
+  .header-actions .lock svg{
+    flex:0 0 auto;
+  }
+}
+
 @media(max-width:920px){
   .practice-card{
     min-height:230px !important;
@@ -101,6 +138,21 @@
   }
   .practice-card h3{
     margin:30px 0 12px !important;
+  }
+}
+
+@media(max-width:820px){
+  /* no celular preserva o cabeçalho compacto: apenas o ícone do cadeado */
+  .header-actions .lock::after{content:none}
+  .header-actions .lock{
+    width:48px !important;
+    min-width:48px;
+    padding:0 !important;
+    margin-right:0;
+  }
+  .header-actions .chat{
+    transform:none;
+    margin-right:10px !important;
   }
 }
 
