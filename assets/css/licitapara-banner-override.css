@@ -1,30 +1,29 @@
-/* Imagem oficial do LicitaPará fornecida pelo usuário em 04/09/2026.
-   Uma única arte, sem logo antiga sobreposta, na HOME e na página interna. */
+/* LicitaPará — correção definitiva: UMA ÚNICA ARTE OFICIAL
+   A imagem antiga do HTML permanece apenas como fallback sem renderização.
+   A arte aprovada é exibida por pseudo-elemento, evitando sobreposição. */
 
-/* Banner oficial */
+/* HOME e página interna: elimina qualquer fundo/arte antiga */
 html body .licitapara-section .lp-signature,
 html body .lp-page-mark{
   position:relative !important;
-  background-image:url('../images/licitapara-oficial-1600.webp') !important;
-  background-position:center !important;
-  background-repeat:no-repeat !important;
-  background-size:contain !important;
-  background-color:#064d40 !important;
-  border:1px solid rgba(212,173,92,.55) !important;
-  box-shadow:0 22px 54px rgba(0,0,0,.20) !important;
-  overflow:hidden !important;
+  display:block !important;
+  background:none !important;
+  background-image:none !important;
   padding:0 !important;
+  overflow:hidden !important;
+  border:1px solid rgba(212,173,92,.58) !important;
+  border-radius:12px !important;
+  box-shadow:0 24px 56px rgba(0,0,0,.24) !important;
   color:transparent !important;
   font-size:0 !important;
   line-height:0 !important;
 }
 
-/* Remove DEFINITIVAMENTE a logo antiga que o HTML ainda carrega.
-   A especificidade abaixo vence as regras inline antigas com !important. */
+/* Esconde de forma absoluta a logo antiga que ainda existe no HTML */
 html body .licitapara-section .lp-signature > img,
-html body .lp-page-mark > img,
 html body .licitapara-section .lp-signature > span,
 html body .licitapara-section .lp-signature > i,
+html body .lp-page-mark > img,
 html body .lp-page-mark > span,
 html body .lp-page-mark > i{
   display:none !important;
@@ -32,57 +31,63 @@ html body .lp-page-mark > i{
   opacity:0 !important;
   width:0 !important;
   height:0 !important;
+  max-width:0 !important;
+  max-height:0 !important;
   position:absolute !important;
   pointer-events:none !important;
 }
 
-/* Evita qualquer marca antiga em pseudo-elementos. */
+/* Exibe SOMENTE a imagem oficial aprovada pelo usuário */
 html body .licitapara-section .lp-signature::before,
+html body .lp-page-mark::before{
+  content:"" !important;
+  display:block !important;
+  position:absolute !important;
+  inset:0 !important;
+  z-index:2 !important;
+  background-image:url('../images/licitapara-oficial-1600.webp') !important;
+  background-repeat:no-repeat !important;
+  background-position:center !important;
+  background-size:cover !important;
+}
+
 html body .licitapara-section .lp-signature::after,
-html body .lp-page-mark::before,
 html body .lp-page-mark::after{
   content:none !important;
   display:none !important;
 }
 
-/* HOME: a arte vira um banner horizontal grande e marcante. */
+/* HOME — banner principal do bloco LicitaPará */
 html body .licitapara-section .licitapara-grid{
-  grid-template-columns:minmax(0,1.25fr) minmax(340px,.82fr) !important;
-  gap:clamp(34px,4.6vw,72px) !important;
+  grid-template-columns:minmax(0,1.18fr) minmax(300px,.72fr) !important;
+  gap:clamp(34px,4.4vw,70px) !important;
   align-items:center !important;
 }
 
 html body .licitapara-section .lp-signature{
   grid-column:1 / -1 !important;
   justify-self:center !important;
-  width:min(100%,1080px) !important;
-  max-width:1080px !important;
+  width:min(100%,1040px) !important;
+  max-width:1040px !important;
   min-width:0 !important;
   height:auto !important;
   min-height:0 !important;
   aspect-ratio:3 / 1 !important;
-  margin:0 auto clamp(30px,3.4vw,50px) !important;
-  border-radius:12px !important;
+  margin:0 auto clamp(30px,3.4vw,48px) !important;
 }
 
-html body .licitapara-section .licitapara-copy{
-  grid-column:1 !important;
-}
+html body .licitapara-section .licitapara-copy{grid-column:1 !important}
+html body .licitapara-section .licitapara-link{grid-column:2 !important}
 
-html body .licitapara-section .licitapara-link{
-  grid-column:2 !important;
-}
-
-/* Página específica: mesma imagem, também grande e limpa. */
+/* PÁGINA ESPECÍFICA — mesma arte, maior e limpa */
 html body .lp-page-mark{
-  width:min(100%,980px) !important;
-  max-width:980px !important;
+  width:min(100%,900px) !important;
+  max-width:900px !important;
   min-width:0 !important;
   height:auto !important;
   min-height:0 !important;
   aspect-ratio:3 / 1 !important;
-  margin:0 0 clamp(32px,3.4vw,52px) !important;
-  border-radius:12px !important;
+  margin:0 0 clamp(30px,3.2vw,46px) !important;
 }
 
 html body .lp-page-hero{
@@ -90,9 +95,25 @@ html body .lp-page-hero{
 }
 
 html body .lp-page-grid{
-  grid-template-columns:minmax(0,1.18fr) minmax(300px,.62fr) !important;
+  grid-template-columns:minmax(0,1.18fr) minmax(300px,.58fr) !important;
   gap:clamp(44px,6vw,92px) !important;
   align-items:center !important;
+}
+
+/* Botão externo: mostra apenas o texto solicitado, mas mantém o URL real no href */
+html body .lp-final-actions .button-accent{
+  font-size:0 !important;
+}
+html body .lp-final-actions .button-accent > *{
+  display:none !important;
+}
+html body .lp-final-actions .button-accent::after{
+  content:"Ir para LicitaPará" !important;
+  display:inline-block !important;
+  font-size:.93rem !important;
+  line-height:1.2 !important;
+  font-weight:800 !important;
+  letter-spacing:.01em !important;
 }
 
 @media(max-width:980px){
@@ -100,18 +121,15 @@ html body .lp-page-grid{
   html body .lp-page-grid{
     grid-template-columns:1fr !important;
   }
-
-  html body .licitapara-section .lp-signature{
-    width:min(100%,900px) !important;
-  }
-
   html body .licitapara-section .licitapara-copy,
   html body .licitapara-section .licitapara-link{
     grid-column:1 !important;
   }
-
-  html body .lp-page-mark{
+  html body .licitapara-section .lp-signature{
     width:min(100%,860px) !important;
+  }
+  html body .lp-page-mark{
+    width:min(100%,820px) !important;
   }
 }
 
@@ -121,6 +139,10 @@ html body .lp-page-grid{
     width:100% !important;
     aspect-ratio:3 / 1 !important;
     border-radius:8px !important;
-    background-size:contain !important;
+  }
+  html body .licitapara-section .lp-signature::before,
+  html body .lp-page-mark::before{
+    background-size:cover !important;
+    background-position:center !important;
   }
 }
