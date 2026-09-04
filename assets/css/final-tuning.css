@@ -405,3 +405,23 @@ html body .trust-strip span{
     text-align:left !important;
   }
 }
+
+/* Ajuste fino solicitado no hero: centralização real do rótulo e palavras inteiras. */
+html body .hero-main .eyebrow{
+  width:fit-content !important;
+  max-width:100% !important;
+  margin:0 auto 22px !important;
+  padding:0 !important;
+  align-self:center !important;
+  text-align:center !important;
+}
+
+html body .hero-aside .aside-statement{
+  text-align:left !important;
+  text-align-last:auto !important;
+  text-wrap:balance !important;
+  hyphens:none !important;
+  -webkit-hyphens:none !important;
+  word-break:normal !important;
+  overflow-wrap:normal !important;
+}
