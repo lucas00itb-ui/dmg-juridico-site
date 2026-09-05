@@ -1,0 +1,65 @@
+/* Quem somos: ritmo editorial compacto com destaque preservado para a equipe. */
+.page-hero { padding:0; }
+.page-hero .container { width:min(calc(100% - 64px),1120px); }
+.page-hero-grid { min-height:0; padding:52px 0; grid-template-columns:.9fr 1.1fr; gap:48px; align-items:center; }
+.page-hero .eyebrow { margin:0 0 12px; font-size:.8125rem; letter-spacing:.12em; line-height:1.45; }
+.page-hero h1 { font-size:clamp(2.75rem,5vw,4.75rem); line-height:.95; letter-spacing:-.045em; white-space:normal; }
+.page-hero .page-lead { font-size:1rem; line-height:1.6; max-width:540px; padding-left:22px; margin:0; }
+
+.office-section { padding:52px 0; }
+.office-section .container { width:min(calc(100% - 64px),1120px); }
+.office-section .office-grid { grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr); gap:52px; align-items:center; }
+.office-section .office-kicker { font-size:.8125rem; letter-spacing:.12em; }
+.office-section h2 { font-size:clamp(2rem,3.5vw,3.25rem); line-height:1.08; letter-spacing:-.035em; margin:12px 0 0; max-width:14ch; text-wrap:balance; }
+.office-section .office-copy { font-size:1rem; line-height:1.65; color:#4f524f; }
+.office-section .office-copy>p { max-width:62ch; margin:0; }
+.office-section .office-values { margin-top:24px; }
+.office-section .office-value { padding:16px 16px 0 0; min-width:0; }
+.office-section .office-value:last-child { padding-left:16px; }
+.office-section .office-value span { font-size:1.0625rem; line-height:1.25; }
+.office-section .office-value small { font-size:.875rem; line-height:1.45; margin-top:5px; }
+
+/* A equipe continua sendo a principal apresentação visual da página. */
+.team-section { padding:clamp(72px,7vw,96px) 0; }
+.team-heading { grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr); gap:48px; margin-bottom:48px; }
+.team-heading h2 { font-size:clamp(2.75rem,5vw,5.5rem); line-height:.98; }
+.team-heading>p { font-size:1rem; line-height:1.6; max-width:46ch; }
+
+.location-section { padding:52px 0; }
+.location-head { grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); gap:44px; align-items:center; margin-bottom:28px; }
+.location-head h2 { font-size:clamp(2.25rem,4vw,4.25rem); line-height:1.02; letter-spacing:-.04em; max-width:15ch; text-wrap:balance; }
+.location-head p { font-size:1rem; line-height:1.6; max-width:52ch; }
+.location-layout { grid-template-columns:minmax(260px,.65fr) minmax(0,1.35fr); gap:18px; }
+.location-card { min-height:320px; padding:28px; gap:24px; }
+.location-card address { font-size:clamp(1.5rem,2.2vw,2.25rem); line-height:1.22; letter-spacing:-.02em; margin:12px 0; overflow-wrap:normal; word-break:normal; }
+.location-card p { font-size:.9375rem; line-height:1.65; }
+.location-card .map-link { margin-top:14px; font-size:.9375rem; }
+.map-frame, .map-frame iframe { min-height:320px; }
+
+.cta-band { padding:44px 0; }
+.cta-band .cta-grid { gap:36px; }
+.cta-band h2 { font-size:clamp(2rem,3.6vw,3.75rem); line-height:1.05; max-width:18ch; }
+.cta-band .eyebrow { margin-bottom:12px; }
+
+@media(max-width:900px) {
+  .page-hero-grid, .office-section .office-grid, .team-heading, .location-head, .location-layout { grid-template-columns:1fr; }
+  .page-hero-grid { padding:44px 0; gap:24px; }
+  .page-hero .page-lead { padding:18px 0 0; border-left:0; border-top:1px solid rgba(255,255,255,.18); }
+  .office-section .office-grid, .team-heading, .location-head { gap:24px; }
+  .office-section h2, .location-head h2 { max-width:none; }
+  .location-layout { gap:14px; }
+  .location-card, .map-frame, .map-frame iframe { min-height:300px; }
+}
+@media(max-width:620px) {
+  .page-hero .container, .office-section .container { width:calc(100% - 34px); }
+  .page-hero-grid { padding:36px 0; }
+  .page-hero h1 { font-size:clamp(2.5rem,13vw,3.65rem); }
+  .office-section, .location-section { padding:42px 0; }
+  .office-section .office-values { grid-template-columns:1fr; }
+  .office-section .office-value, .office-section .office-value:last-child { padding:13px 0; border-right:0; border-bottom:1px solid rgba(0,0,0,.13); }
+  .team-section { padding:60px 0; }
+  .team-heading h2 { font-size:clamp(2.5rem,12vw,4rem); }
+  .location-card { padding:24px; min-height:0; }
+  .map-frame, .map-frame iframe { min-height:270px; }
+  .cta-band { padding:38px 0; }
+}
