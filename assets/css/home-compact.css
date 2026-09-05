@@ -1,5 +1,7 @@
 /* Compact editorial hierarchy; preserve readable body text and natural word wrapping. */
-.principles-section .principle { transition:background-color .25s ease,color .25s ease; min-width:0; }
+.principles-section .principle { transition:background-color .25s ease,color .25s ease; min-width:0; min-height:0; padding:28px 24px; gap:24px; justify-content:flex-start; }
+.principles-section .principle h2 { font-size:clamp(1.5rem,2vw,2rem); line-height:1.1; margin:18px 0 10px; }
+.principles-section .principle p { font-size:1rem; line-height:1.5; }
 .principles-section .principle.is-touched { background:#145548; color:#fff; }
 .principles-section .principle.is-touched small { color:#f0d28e; }
 @media(hover:hover) {
@@ -30,8 +32,8 @@
   max-width:22ch; text-align:left; word-break:normal; overflow-wrap:normal;
   hyphens:none; text-wrap:balance;
 }
-#atuacao, #contato { padding-block:clamp(40px,5vw,64px); }
-#atuacao .section-heading { grid-template-columns:1fr; gap:16px; margin-bottom:28px; }
+#atuacao, #contato { padding-block:clamp(34px,4vw,52px); }
+#atuacao .section-heading { grid-template-columns:1fr; gap:12px; margin-bottom:22px; }
 #atuacao .section-heading h2, #cliente .client-copy h2, #contato .contact-copy h2 {
   font-size:clamp(1.75rem,3vw,2.625rem); line-height:1.16;
   letter-spacing:-.025em; word-break:normal; hyphens:none; text-wrap:balance;
@@ -43,12 +45,18 @@
 #atuacao .section-heading>p strong { color:#242c27; font-weight:700; }
 #atuacao .eyebrow { color:#75551e; font-size:.875rem; margin-bottom:12px; }
 #atuacao .practice-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
-#atuacao .practice-card { min-height:0; padding:22px 26px; justify-content:flex-start; gap:14px; }
+#atuacao .practice-card { min-height:0; padding:18px 22px; justify-content:flex-start; gap:12px; }
 #atuacao .practice-card h3 { font-size:1.75rem; line-height:1.15; margin:0 0 10px; }
 #atuacao .practice-card p { font-size:1rem; line-height:1.55; color:#50534f; }
 #atuacao .practice-top span { font-size:.875rem; }
 #atuacao .practice-icon { width:30px; height:30px; }
-#cliente .client-grid { min-height:0; padding-block:48px; gap:36px; grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr); }
+#licitapara.licitapara-section { padding-block:40px !important; }
+#licitapara .licitapara-grid { min-height:0 !important; row-gap:18px !important; }
+#licitapara .licitapara-copy h2 { font-size:clamp(2rem,3.4vw,3.5rem) !important; line-height:1.06 !important; margin-bottom:16px !important; }
+#licitapara .licitapara-copy p { font-size:1rem; line-height:1.55 !important; }
+#licitapara .lp-signature { max-width:340px !important; }
+#licitapara .licitapara-link { max-width:340px !important; min-height:56px; }
+#cliente .client-grid { min-height:0; padding-block:38px; gap:28px; grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr); }
 #cliente .client-copy>p:not(.eyebrow), #contato .contact-copy>p:not(.eyebrow) {
   font-size:1rem; line-height:1.6; margin:16px 0 0; color:#c2c6c5; max-width:60ch;
 }
@@ -56,7 +64,7 @@
 #cliente .client-access { padding-left:28px; }
 #cliente .client-access strong { font-size:1.375rem; line-height:1.3; }
 #cliente .client-access p { font-size:1rem; margin:12px 0 18px; color:#bec3c2; }
-#contato .contact-grid { grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:36px; }
+#contato .contact-grid { grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:28px; }
 #contato .contact-row { grid-template-columns:90px minmax(0,1fr); gap:8px 16px; padding-block:16px; }
 #contato .contact-row small { grid-column:2; text-align:left; max-width:none; color:#b5bab9; font-size:.875rem; }
 #contato .contact-row>span { font-size:.875rem; letter-spacing:.06em; }
@@ -70,7 +78,8 @@
   .hero-aside { padding:30px 0; }
   .hero-aside .aside-statement { max-width:30ch; font-size:clamp(1.5rem,5vw,2rem); }
   #atuacao .practice-grid { grid-template-columns:1fr; }
-  #atuacao .practice-card { padding:20px; }
+  #atuacao .practice-card { padding:18px; }
+  .principles-section .principle { padding:24px 20px; min-height:0; }
 }
 @media(max-width:420px) {
   #contato .contact-row { grid-template-columns:1fr; }

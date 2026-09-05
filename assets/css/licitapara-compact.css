@@ -1,0 +1,32 @@
+/* Conteúdo após a apresentação: leitura rápida e blocos compactos. */
+.lp-info, .lp-role, .lp-services, .lp-final { padding:clamp(42px,5vw,66px) 0; }
+.lp-info-grid { grid-template-columns:minmax(260px,.75fr) minmax(0,1.25fr); gap:48px; }
+.lp-info h2, .lp-role h2, .lp-services h2, .lp-final h2 {
+  font-size:clamp(2rem,3.5vw,3.75rem); line-height:1.06; letter-spacing:-.035em; text-wrap:balance;
+}
+.lp-info-copy { font-size:1rem; line-height:1.62; }
+.lp-info-copy p { margin:0 0 14px; }
+.lp-note { margin-top:20px; padding:16px 18px; line-height:1.55; }
+.lp-role-head, .lp-services-head { gap:44px; margin-bottom:28px; }
+.lp-role-head>p, .lp-services-head>p { font-size:1rem; line-height:1.6; }
+.lp-steps { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.lp-step { min-height:0; padding:22px; gap:18px; justify-content:flex-start; }
+.lp-step h3 { font-size:clamp(1.5rem,2vw,2rem); margin:16px 0 9px; }
+.lp-step p { font-size:1rem; line-height:1.52; }
+.lp-service-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.lp-service { min-height:0; padding:20px 22px; }
+.lp-service h3 { font-size:clamp(1.5rem,2vw,2rem); margin:18px 0 9px; }
+.lp-service p { font-size:1rem; line-height:1.52; }
+.lp-final-grid { gap:44px; }
+.lp-final-copy p { font-size:1rem; line-height:1.6; margin:16px 0 0; }
+.lp-final-copy .lp-legal { font-size:.875rem; margin-top:18px; }
+.lp-final-actions { min-width:230px; gap:10px; }
+@media(max-width:900px) {
+  .lp-info-grid, .lp-role-head, .lp-services-head, .lp-final-grid { grid-template-columns:1fr; gap:24px; }
+  .lp-steps { grid-template-columns:1fr; }
+}
+@media(max-width:620px) {
+  .lp-info, .lp-role, .lp-services, .lp-final { padding:38px 0; }
+  .lp-service-grid { grid-template-columns:1fr; }
+  .lp-step, .lp-service { padding:18px; }
+}
