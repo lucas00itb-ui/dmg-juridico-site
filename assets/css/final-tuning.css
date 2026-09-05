@@ -10,10 +10,10 @@ html body .licitapara-section .lp-signature{
   position:relative !important;
   display:block !important;
   background-color:#064d40 !important;
-  background-image:none !important;
+  background-image:url('../images/licitapara-home-oficial.webp?v=20260905-final') !important;
   background-repeat:no-repeat !important;
   background-position:center !important;
-  background-size:contain !important;
+  background-size:cover !important;
   padding:0 !important;
   overflow:hidden !important;
   border:1px solid rgba(212,173,92,.72) !important;
@@ -336,7 +336,7 @@ html body .lp-info .lp-note{
   html body .licitapara-section .lp-signature{
     width:100% !important;
     border-radius:8px !important;
-    background-size:contain !important;
+    background-size:cover !important;
     background-position:center !important;
   }
   html body .lp-page-hero .lp-page-kicker{
