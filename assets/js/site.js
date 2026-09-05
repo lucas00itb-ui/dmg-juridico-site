@@ -6,7 +6,7 @@ if (siteScript) {
   if (!document.querySelector('link[data-dmg-final-tuning]')) {
     const finalTuning = document.createElement('link');
     finalTuning.rel = 'stylesheet';
-    finalTuning.href = new URL('assets/css/final-tuning.css?v=20260905-hero-center', rootUrl).href;
+    finalTuning.href = new URL('assets/css/final-tuning.css?v=20260905-hero-ivory', rootUrl).href;
     finalTuning.dataset.dmgFinalTuning = 'true';
     document.head.appendChild(finalTuning);
   }
