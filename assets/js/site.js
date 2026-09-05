@@ -13,6 +13,19 @@ if (siteScript) {
 }
 
 const menuButton = document.querySelector('.menu-toggle');
+/* Touch feedback without blocking native scrolling or creating fake buttons. */
+document.querySelectorAll('.principles-section .principle').forEach((card) => {
+  let resetTimer;
+  const clear = () => { clearTimeout(resetTimer); card.classList.remove('is-touched'); };
+  card.addEventListener('pointerdown', (event) => {
+    if (event.pointerType === 'mouse') return;
+    clearTimeout(resetTimer);
+    card.classList.add('is-touched');
+  }, { passive:true });
+  card.addEventListener('pointerup', () => { resetTimer = setTimeout(clear, 600); }, { passive:true });
+  card.addEventListener('pointercancel', clear, { passive:true });
+  card.addEventListener('pointerleave', clear, { passive:true });
+});
 const menu = document.querySelector('.main-nav');
 
 /* Ordem institucional aprovada: ... Áreas de atuação | Contato | LicitaPará */
