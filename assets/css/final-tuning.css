@@ -473,8 +473,8 @@ html body .hero-actions .text-link{
   padding:15px 22px !important;
   border:1px solid rgba(216,176,85,.9) !important;
   border-radius:3px !important;
-  background:#145548 !important;
-  color:#fff !important;
+  background:#eee9de !important;
+  color:#123d34 !important;
   font-size:.96rem !important;
   font-weight:700 !important;
   line-height:1.2 !important;
@@ -486,7 +486,7 @@ html body .hero-actions .text-link{
 html body .hero-actions .button:hover,
 html body .hero-actions .text-link:hover{
   background:var(--gold) !important;
-  color:#0c1512 !important;
+  color:#102f29 !important;
   transform:translateY(-2px) !important;
 }
 
