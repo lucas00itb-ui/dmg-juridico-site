@@ -4,13 +4,19 @@
   "description": "Advocacia responsável e estratégica no Norte do Brasil.",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#08131f",
-  "theme_color": "#08131f",
+  "background_color": "#f2eee4",
+  "theme_color": "#123e35",
   "icons": [
     {
       "src": "favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
       "purpose": "any"
     }
   ]
