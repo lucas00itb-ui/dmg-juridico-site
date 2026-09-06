@@ -539,3 +539,75 @@ html body .hero-aside .aside-meta span{
     gap:12px !important;
   }
 }
+
+/* Cabeçalho estável: evita sobreposição entre marca, menu e ações. */
+@media(min-width:821px){
+  html body .site-header .container.nav-wrap{
+    width:min(calc(100% - 36px),1380px) !important;
+    min-height:88px !important;
+    grid-template-columns:auto minmax(0,1fr) auto !important;
+    gap:clamp(12px,1.5vw,22px) !important;
+  }
+  html body .site-header .brand{
+    min-width:0 !important;
+    gap:10px !important;
+    flex-shrink:0 !important;
+  }
+  html body .site-header .brand img{
+    width:116px !important;
+    max-height:62px !important;
+  }
+  html body .site-header .main-nav{
+    min-width:0 !important;
+    gap:clamp(10px,1.25vw,20px) !important;
+    padding:0 !important;
+    white-space:nowrap !important;
+  }
+  html body .site-header .main-nav a{
+    font-size:clamp(.76rem,.82vw,.88rem) !important;
+    line-height:1.2 !important;
+  }
+  html body .site-header .main-nav a[href*="area-do-cliente"]{
+    display:none !important;
+  }
+  html body .site-header .header-actions{
+    width:auto !important;
+    display:flex !important;
+    grid-template-columns:none !important;
+    align-items:center !important;
+    gap:10px !important;
+    margin:0 !important;
+    transform:none !important;
+  }
+  html body .site-header .header-actions .chat,
+  html body .site-header .header-actions .lock{
+    grid-column:auto !important;
+    width:auto !important;
+    min-width:134px !important;
+    height:52px !important;
+    margin:0 !important;
+    padding:0 14px !important;
+  }
+  html body .site-header .header-actions .lock{min-width:142px !important}
+}
+
+@media(min-width:821px) and (max-width:1440px){
+  html body .site-header .brand-copy{display:none !important}
+}
+
+@media(min-width:821px) and (max-width:1120px){
+  html body .site-header .main-nav{gap:9px !important}
+  html body .site-header .main-nav a{font-size:.74rem !important}
+  html body .site-header .header-actions .chat,
+  html body .site-header .header-actions .lock{
+    width:48px !important;
+    min-width:48px !important;
+    padding:0 !important;
+    justify-content:center !important;
+  }
+  html body .site-header .header-actions .chat::after,
+  html body .site-header .header-actions .lock::after{
+    content:none !important;
+    display:none !important;
+  }
+}
