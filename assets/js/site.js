@@ -6,7 +6,7 @@ if (siteScript) {
   if (!document.querySelector('link[data-dmg-final-tuning]')) {
     const finalTuning = document.createElement('link');
     finalTuning.rel = 'stylesheet';
-    finalTuning.href = new URL('assets/css/final-tuning.css?v=20260905-hero-ivory', rootUrl).href;
+    finalTuning.href = new URL('assets/css/final-tuning.css?v=20260906-header-fix', rootUrl).href;
     finalTuning.dataset.dmgFinalTuning = 'true';
     document.head.appendChild(finalTuning);
   }
@@ -33,12 +33,19 @@ if (siteScript) {
   const navigationRoot = siteScript.src.replace(/assets\/js\/site\.js(?:\?.*)?$/, '');
   const publicationsUrl = new URL('publicacoes/', navigationRoot).href;
   [menu, document.querySelector('.footer-nav')].forEach((navigation) => {
-    if (!navigation || navigation.querySelector('a[href*="publicacoes"]')) return;
-    const link = document.createElement('a');
-    link.href = publicationsUrl;
-    link.textContent = 'Publicações';
-    const contact = Array.from(navigation.querySelectorAll('a')).find((item) => item.textContent.trim() === 'Contato');
-    navigation.insertBefore(link, contact || null);
+    if (!navigation) return;
+    const publicationLinks = Array.from(navigation.querySelectorAll('a')).filter((item) =>
+      item.textContent.trim().toLocaleLowerCase('pt-BR') === 'publicações' ||
+      item.href.includes('/publicacoes/')
+    );
+    publicationLinks.slice(1).forEach((duplicate) => duplicate.remove());
+    if (!publicationLinks.length) {
+      const link = document.createElement('a');
+      link.href = publicationsUrl;
+      link.textContent = 'Publicações';
+      const contact = Array.from(navigation.querySelectorAll('a')).find((item) => item.textContent.trim() === 'Contato');
+      navigation.insertBefore(link, contact || null);
+    }
   });
 }
 
