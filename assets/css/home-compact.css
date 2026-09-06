@@ -44,12 +44,17 @@
 }
 #atuacao .section-heading>p strong { color:#242c27; font-weight:700; }
 #atuacao .eyebrow { color:#75551e; font-size:.875rem; margin-bottom:12px; }
-#atuacao .practice-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
-#atuacao .practice-card { min-height:0; padding:18px 22px; justify-content:flex-start; gap:12px; }
-#atuacao .practice-card h3 { font-size:1.75rem; line-height:1.15; margin:0 0 10px; }
-#atuacao .practice-card p { font-size:1rem; line-height:1.55; color:#50534f; }
+#atuacao .practice-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+#atuacao .practice-card { min-height:0; padding:17px 19px; justify-content:flex-start; gap:12px; }
+#atuacao .practice-card h3 { font-size:clamp(1.35rem,1.75vw,1.7rem); line-height:1.12; margin:0 0 9px; }
+#atuacao .practice-card p { font-size:.93rem; line-height:1.5; color:#50534f; }
 #atuacao .practice-top span { font-size:.875rem; }
 #atuacao .practice-icon { width:30px; height:30px; }
+.practice-network { display:grid; grid-template-columns:38px minmax(0,1fr) auto; gap:16px; align-items:center; margin-top:14px; padding:15px 18px; border:1px solid rgba(20,20,20,.16); background:#e8e2d6; color:#222019; }
+.practice-network-mark { width:36px; height:36px; display:grid; place-items:center; border-radius:50%; background:#18584b; color:#fff; font:600 1.15rem Georgia,serif; }
+.practice-network strong { display:block; font:600 1rem/1.2 Georgia,serif; }
+.practice-network p { max-width:72ch; margin:4px 0 0; color:#625d53; font-size:.82rem; line-height:1.45; }
+.practice-network a { color:#674b1b; font-size:.78rem; font-weight:800; white-space:nowrap; }
 #licitapara.licitapara-section { padding-block:40px !important; }
 #licitapara .licitapara-grid { min-height:0 !important; row-gap:18px !important; }
 #licitapara .licitapara-copy h2 { font-size:clamp(2rem,3.4vw,3.5rem) !important; line-height:1.06 !important; margin-bottom:16px !important; }
@@ -72,7 +77,14 @@
 #contato .contact-cta { margin-top:20px; }
 @media(max-width:900px) {
   #cliente .client-grid, #contato .contact-grid { grid-template-columns:1fr; gap:24px; }
+  #atuacao .practice-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .practice-network { grid-template-columns:38px minmax(0,1fr); }
+  .practice-network a { grid-column:2; }
   #cliente .client-access { border-left:0; border-top:1px solid rgba(255,255,255,.18); padding:24px 0 0; }
+}
+@media(max-width:520px) {
+  .practice-network { grid-template-columns:1fr; gap:10px; padding:16px; }
+  .practice-network a { grid-column:auto; }
 }
 @media(max-width:760px) {
   .hero-aside { padding:30px 0; }
