@@ -28,6 +28,20 @@ document.querySelectorAll('.principles-section .principle').forEach((card) => {
 });
 const menu = document.querySelector('.main-nav');
 
+/* Mantém Publicações disponível também nas páginas legadas/minificadas. */
+if (siteScript) {
+  const navigationRoot = siteScript.src.replace(/assets\/js\/site\.js(?:\?.*)?$/, '');
+  const publicationsUrl = new URL('publicacoes/', navigationRoot).href;
+  [menu, document.querySelector('.footer-nav')].forEach((navigation) => {
+    if (!navigation || navigation.querySelector('a[href*="publicacoes"]')) return;
+    const link = document.createElement('a');
+    link.href = publicationsUrl;
+    link.textContent = 'Publicações';
+    const contact = Array.from(navigation.querySelectorAll('a')).find((item) => item.textContent.trim() === 'Contato');
+    navigation.insertBefore(link, contact || null);
+  });
+}
+
 /* Ordem institucional aprovada: ... Áreas de atuação | Contato | LicitaPará */
 if (menu) {
   const menuLinks = Array.from(menu.querySelectorAll('a'));
