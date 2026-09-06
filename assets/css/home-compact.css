@@ -45,13 +45,13 @@
 #atuacao .section-heading>p strong { color:#242c27; font-weight:700; }
 #atuacao .eyebrow { color:#75551e; font-size:.875rem; margin-bottom:12px; }
 #atuacao .practice-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
-#atuacao .practice-card { min-height:0; padding:14px 16px; display:grid; grid-template-columns:30px minmax(0,1fr); align-items:start; justify-content:initial; gap:12px; }
+#atuacao .practice-card { min-height:0 !important; padding:14px 16px !important; display:grid; grid-template-columns:30px minmax(0,1fr); align-items:start; justify-content:initial; gap:12px; }
 #atuacao .practice-card>div:last-child { min-width:0; }
-#atuacao .practice-card h3 { font-size:clamp(1.2rem,1.5vw,1.48rem); line-height:1.1; margin:0 0 7px; }
-#atuacao .practice-card p { font-size:.84rem; line-height:1.42; color:#50534f; }
+#atuacao .practice-card h3 { font-size:clamp(1.2rem,1.5vw,1.48rem) !important; line-height:1.1 !important; margin:0 0 7px !important; }
+#atuacao .practice-card p { font-size:.84rem !important; line-height:1.42 !important; color:#50534f; }
 #atuacao .practice-top { display:flex; flex-direction:column; justify-content:flex-start; align-items:center; gap:9px; }
-#atuacao .practice-top span { font-size:.68rem; }
-#atuacao .practice-icon { width:27px; height:27px; }
+#atuacao .practice-top span { font-size:.68rem !important; }
+#atuacao .practice-icon { width:27px !important; height:27px !important; font-size:.78rem !important; }
 .practice-network { display:grid; grid-template-columns:32px minmax(0,1fr) auto; gap:13px; align-items:center; margin-top:10px; padding:11px 14px; border:1px solid rgba(20,20,20,.16); background:#e8e2d6; color:#222019; }
 .practice-network-mark { width:30px; height:30px; display:grid; place-items:center; border-radius:50%; background:#18584b; color:#fff; font:600 1rem Georgia,serif; }
 .practice-network strong { display:block; font:600 1rem/1.2 Georgia,serif; }
@@ -92,7 +92,7 @@
   .hero-aside { padding:30px 0; }
   .hero-aside .aside-statement { max-width:30ch; font-size:clamp(1.5rem,5vw,2rem); }
   #atuacao .practice-grid { grid-template-columns:1fr; }
-  #atuacao .practice-card { padding:14px; }
+  #atuacao .practice-card { padding:14px !important; }
   .principles-section .principle { padding:24px 20px; min-height:0; }
 }
 @media(max-width:420px) {
