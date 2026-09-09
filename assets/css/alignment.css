@@ -1,0 +1,17 @@
+/* Shared reading alignment across the institutional site. */
+html body.dmg-aligned :is(main, #conteudo) :is(h1,h2,h3,h4,p,li,address,summary,label,blockquote),
+html body.dmg-aligned :is(footer, .site-footer) :is(p,address,li,h2,h3),
+html body.dmg-aligned :is(main, #conteudo) :is(.aside-statement,.page-lead,.office-copy,.lp-info-copy,.contact-copy,.legal-card,.legal-meta) {
+  text-align:left!important;
+  text-align-last:auto!important;
+  word-spacing:normal!important;
+  white-space:normal;
+  overflow-wrap:break-word;
+  hyphens:none;
+}
+html body.dmg-aligned :is(main, #conteudo) :is(h1,h2,h3,h4) { text-wrap:balance; }
+html body.dmg-aligned :is(main, #conteudo) p { line-height:1.7!important; }
+html body.dmg-aligned :is(main, #conteudo) :is(.section-heading,.team-heading,.location-head,.lp-services-head,.lp-role-head,.office-grid) { align-items:start!important; }
+html body.dmg-aligned :is(main, #conteudo) :is(.hero-main,.hero-actions,.lp-final-actions) { justify-content:flex-start!important; align-items:flex-start!important; }
+html body.dmg-aligned :is(main, #conteudo) .hero-main :is(h1,p) { margin-left:0!important; margin-right:0!important; }
+html body.dmg-aligned :is(main, #conteudo) .hero-main .eyebrow { text-align:left!important; }
