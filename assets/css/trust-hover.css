@@ -1,0 +1,8 @@
+/* Individual gold feedback for the four institutional principles. */
+html body .trust-strip { grid-template-columns:repeat(4,minmax(0,1fr))!important; gap:8px!important; padding:8px max(18px,calc((100% - 1200px)/2))!important; align-items:stretch!important; justify-items:stretch!important; }
+html body .trust-strip>i { display:none!important; }
+html body .trust-strip>span { display:flex!important; align-items:center; justify-content:center; min-width:0; padding:20px 12px; border-radius:4px; text-align:center; color:#f4f1e8; background:transparent; transition:background-color .25s ease,color .25s ease; }
+@media(hover:hover) { html body .trust-strip>span:hover { background:#d0ad5e; color:#171510; } }
+html body .trust-strip>span:active { background:#d0ad5e; color:#171510; }
+@media(max-width:820px) { html body .trust-strip { grid-template-columns:repeat(2,minmax(0,1fr))!important; } html body .trust-strip>span { padding:16px 10px; font-size:.875rem!important; line-height:1.5; } }
+@media(prefers-reduced-motion:reduce) { html body .trust-strip>span { transition:none; } }
