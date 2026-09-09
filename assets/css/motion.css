@@ -1,0 +1,23 @@
+/* Quiet, progressively enhanced carousels; content stays available without JS. */
+html body .dmg-carousel { min-width:0; max-width:100%; }
+html body .dmg-carousel .dmg-track { display:flex!important; grid-template-columns:none!important; gap:16px!important; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; overscroll-behavior-x:contain; }
+.dmg-track::-webkit-scrollbar { display:none; }
+html body .dmg-carousel .dmg-track>article { flex:0 0 calc((100% - 32px)/3); scroll-snap-align:start; opacity:1!important; transform:none!important; visibility:visible!important; min-width:0; }
+html body .principles-section .dmg-carousel { width:min(calc(100% - 48px),1200px); margin:auto; }
+html body .principles-section .dmg-track { width:100%; margin:0; }
+html body .principles-section .dmg-track>article { flex-basis:calc((100% - 16px)/2); }
+html body #atuacao .dmg-track .practice-card { padding:24px!important; }
+html body #atuacao .dmg-track .practice-card p { font-size:1rem!important; line-height:1.6!important; }
+html body #atuacao .dmg-track .practice-card h3 { line-height:1.25!important; }
+.dmg-controls { display:flex; align-items:center; justify-content:flex-end; flex-wrap:wrap; gap:10px; padding:16px 0 6px; }
+.dmg-controls button { border:1px solid currentColor; border-radius:50%; background:transparent; color:inherit; min-width:44px; height:44px; cursor:pointer; font:inherit; transition:background .2s; }
+.dmg-controls button:hover { background:rgba(128,128,128,.12); }
+.dmg-controls button:focus-visible,.dmg-track:focus-visible { outline:2px solid #9a783a; outline-offset:4px; }
+.dmg-controls .dmg-pause { border-radius:4px; padding:0 14px; font-size:.875rem; }
+.dmg-count { font-size:.875rem; font-variant-numeric:tabular-nums; margin-right:auto; }
+html body .office-section .office-grid { align-items:start; }
+html body .office-section .office-copy>p { margin:0 0 20px; font-size:1rem; line-height:1.8; }
+html body .office-section h2 { line-height:1.18; }
+@media(max-width:900px) { html body .dmg-carousel .dmg-track>article { flex-basis:calc((100% - 16px)/2); } }
+@media(max-width:600px) { html body .dmg-carousel .dmg-track>article,html body .principles-section .dmg-track>article { flex-basis:100%; } }
+@media(prefers-reduced-motion:reduce) { html body .dmg-track { scroll-behavior:auto!important; } html body .reveal { opacity:1!important; transform:none!important; transition:none!important; } }

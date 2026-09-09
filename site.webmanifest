@@ -1,12 +1,17 @@
 {
   "name": "DMG | Advogados Associados",
   "short_name": "DMG",
-  "description": "Advocacia responsável e estratégica no Norte do Brasil.",
+  "description": "Advocacia estratégica com atendimento humanizado em Manaus e no Norte do Brasil.",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#f2eee4",
-  "theme_color": "#123e35",
+  "theme_color": "#0b0b0a",
   "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
     {
       "src": "favicon.svg",
       "sizes": "any",
