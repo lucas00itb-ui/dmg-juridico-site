@@ -21,3 +21,22 @@ html body .office-section h2 { line-height:1.18; }
 @media(max-width:900px) { html body .dmg-carousel .dmg-track>article { flex-basis:calc((100% - 16px)/2); } }
 @media(max-width:600px) { html body .dmg-carousel .dmg-track>article,html body .principles-section .dmg-track>article { flex-basis:100%; } }
 @media(prefers-reduced-motion:reduce) { html body .dmg-track { scroll-behavior:auto!important; } html body .reveal { opacity:1!important; transform:none!important; transition:none!important; } }
+/* Consistent alignment and predictable carousel dimensions on every route. */
+html body main p,
+html body main address,
+html body main .office-copy,
+html body main .lp-info-copy,
+html body .site-footer p { text-align:left!important; text-align-last:auto!important; word-spacing:normal!important; }
+html body main h2,html body main h3 { text-align:left; word-break:normal; overflow-wrap:break-word; hyphens:none; line-height:1.25; }
+html body .hero-main .hero-intro,html body .hero-main .hero-note { text-align:center!important; }
+html body .dmg-carousel .dmg-track { width:100%!important; max-width:100%!important; min-width:0!important; flex-wrap:nowrap!important; justify-content:flex-start!important; position:relative; }
+html body .dmg-carousel .dmg-track>article { box-sizing:border-box!important; max-width:none!important; margin:0!important; }
+html body .office-section .office-grid>div { min-width:0; }
+html body .office-section .dmg-carousel { margin-top:28px; }
+html body .office-section .office-values.dmg-track { margin:0!important; border:0!important; gap:16px!important; }
+html body .office-section .office-values.dmg-track>.office-value { flex:0 0 100%!important; display:flex!important; flex-direction:column; justify-content:center; align-items:flex-start; min-height:164px; padding:24px!important; border:1px solid rgba(70,60,40,.22)!important; border-radius:4px; background:rgba(255,255,255,.22); cursor:default; }
+html body .office-section .office-value h3 { margin:0 0 12px; font-size:1.35rem; line-height:1.3; text-align:left!important; }
+html body .office-section .office-value p { margin:0; font-size:1rem; line-height:1.6; }
+html body .lp-services .dmg-track>.lp-service { text-align:left!important; }
+html body .lp-services .dmg-track>.lp-service h3 { line-height:1.3!important; }
+html body .lp-services .dmg-track>.lp-service p { font-size:1rem!important; line-height:1.65!important; }
