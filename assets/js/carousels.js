@@ -18,7 +18,7 @@ document.querySelectorAll('[data-carousel]').forEach((track) => {
   const buttons=items.map((item,i)=>{const b=make('',`Mostrar ${item.querySelector('h2,h3')?.textContent || `item ${i+1}`}`);dots.append(b);return b;});
   controls.append(prev,dots,next);frame.append(controls);
   let active=0,timer,startX=null;
-  const interval=1500;track.dataset.interval=String(interval);
+  const interval=2500;track.dataset.interval=String(interval);
   const render=()=>{
     items.forEach((item,i)=>{
       let pos=(i-active+items.length)%items.length;
