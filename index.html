@@ -5,56 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b0b0a">
   <meta name="description" content="DMG Advogados Associados: advocacia estratégica e atendimento humanizado. Orientação jurídica, assessoria e defesa de direitos em Manaus e por atendimento remoto.">
+  <meta name="keywords" content="advogado Manaus, escritório advocacia Manaus, advogado empresarial Manaus, assessoria jurídica AM, licitações advocacia, direito civil Manaus, DMG Advogados">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://dmgjuridico.com.br/">
   <link rel="icon" href="/favicon.png" type="image/png" sizes="96x96">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png?v=20260906-logo-texto-v3">
   <link rel="manifest" href="site.webmanifest">
+  <link rel="preload" as="image" href="assets/images/dmg-monogram-black-transparent.png">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/refinements.css">
   <link rel="stylesheet" href="assets/css/home-compact.css?v=20260906-compact3">
   <link rel="stylesheet" href="assets/css/landing-page.css">
-  <style>
-    /* LicitaPará — correção aplicada diretamente na HOME */
-    .licitapara-section .lp-signature{
-      display:flex!important;
-      align-items:center!important;
-      justify-content:center!important;
-      width:clamp(320px,27vw,410px)!important;
-      max-width:100%!important;
-      min-width:0!important;
-      height:auto!important;
-      padding:14px 16px!important;
-      margin:0!important;
-      background:#004b3e!important;
-      border:1px solid rgba(212,173,92,.62)!important;
-      box-shadow:0 18px 42px rgba(13,63,53,.18)!important;
-      overflow:hidden!important;
-      color:inherit!important;
-      font-size:inherit!important;
-      line-height:normal!important;
-    }
-    .licitapara-section .lp-signature img{
-      display:block!important;
-      width:100%!important;
-      height:auto!important;
-      object-fit:contain!important;
-    }
-    .licitapara-section .lp-signature>span,
-    .licitapara-section .lp-signature>i{display:none!important}
-    .licitapara-grid{
-      grid-template-columns:minmax(330px,.78fr) minmax(440px,1.12fr) minmax(220px,.56fr)!important;
-      gap:clamp(38px,5vw,72px)!important;
-    }
-    @media(max-width:920px){
-      .licitapara-grid{grid-template-columns:1fr!important}
-      .licitapara-section .lp-signature{width:min(100%,460px)!important}
-    }
-    @media(max-width:520px){
-      .licitapara-section .lp-signature{width:100%!important;padding:10px 12px!important}
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/licitapara-fixes.css">
   <title>DMG Advogados Associados | Advocacia em Manaus</title>
   <script src="assets/js/portal-link.js?v=20260906-connect" defer></script>
   <meta property="og:type" content="website">
@@ -93,6 +56,13 @@
   "sameAs": [
     "https://www.instagram.com/dmgjuridico/"
   ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "47",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
   "@id": "https://dmgjuridico.com.br/#escritorio"
 }</script>
   <script type="application/ld+json">{
@@ -108,6 +78,23 @@
   "publisher": {
     "@id": "https://dmgjuridico.com.br/#escritorio"
   }
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Attorney",
+  "name": "DMG Advogados Associados",
+  "url": "https://dmgjuridico.com.br/",
+  "telephone": "+55-92-99498-6742",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Silva Ramos, 89, Centro",
+    "addressLocality": "Manaus",
+    "addressRegion": "AM",
+    "postalCode": "69010-180",
+    "addressCountry": "BR"
+  },
+  "areaServed": "Norte do Brasil",
+  "knowsAbout": ["Direito Civil", "Direito Empresarial", "Licitações", "Direito do Trabalho"]
 }</script>
   <link rel="stylesheet" href="/assets/css/motion.css?v=20260909-featured-2500">
   <script src="/assets/js/carousels.js?v=20260909-featured-2500" defer></script>
@@ -131,14 +118,14 @@
         <a href="publicacoes/">Publicações</a>
         <a href="#contato">Contato</a>
         <a class="external-nav" href="licitapara/">LicitaPará</a>
-        <a href="area-do-cliente/" target="_blank" rel="noopener">Área do cliente</a>
+        <a href="area-do-cliente/" target="_blank" rel="noopener noreferrer">Área do cliente</a>
       </nav>
 
       <div class="header-actions">
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
-        <a class="icon-action lock" href="area-do-cliente/" target="_blank" rel="noopener" aria-label="Área do Cliente">
+        <a class="icon-action lock" href="area-do-cliente/" target="_blank" rel="noopener noreferrer" aria-label="Área do Cliente">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
         </a>
         <a class="icon-action chat" href="https://wa.me/5592994986742?text=Ol%C3%A1%2C%20equipe%20DMG%20Jur%C3%ADdico.%20Gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20inicial%20sobre%20uma%20quest%C3%A3o%20jur%C3%ADdica." target="_blank" rel="noopener noreferrer" aria-label="Falar com a equipe pelo WhatsApp">
@@ -252,7 +239,7 @@
         <div class="client-access reveal reveal-right">
           <strong>Acesso ao Gestor Jurídico 360</strong>
           <p>Ambiente reservado para movimentações, documentos e solicitações de monitoramento.</p>
-          <a class="button button-outline" href="area-do-cliente/" target="_blank" rel="noopener">Acessar Área do Cliente <span aria-hidden="true">↗</span></a>
+          <a class="button button-outline" href="area-do-cliente/" target="_blank" rel="noopener noreferrer">Acessar Área do Cliente <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
@@ -306,7 +293,7 @@
         <a href="#atuacao">Áreas de atuação</a>
         <a href="publicacoes/">Publicações</a>
         <a class="licita-footer" href="licitapara/">LicitaPará</a>
-        <a href="area-do-cliente/" target="_blank" rel="noopener">Área do cliente</a>
+        <a href="area-do-cliente/" target="_blank" rel="noopener noreferrer">Área do cliente</a>
         <a href="#contato">Contato</a>
         <a href="termos-de-uso/">Termos de Uso</a>
         <a href="privacidade/">Privacidade e LGPD</a>

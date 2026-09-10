@@ -1,0 +1,38 @@
+/* LicitaPará — correção aplicada diretamente na HOME */
+.licitapara-section .lp-signature{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:clamp(320px,27vw,410px)!important;
+  max-width:100%!important;
+  min-width:0!important;
+  height:auto!important;
+  padding:14px 16px!important;
+  margin:0!important;
+  background:#004b3e!important;
+  border:1px solid rgba(212,173,92,.62)!important;
+  box-shadow:0 18px 42px rgba(13,63,53,.18)!important;
+  overflow:hidden!important;
+  color:inherit!important;
+  font-size:inherit!important;
+  line-height:normal!important;
+}
+.licitapara-section .lp-signature img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  object-fit:contain!important;
+}
+.licitapara-section .lp-signature>span,
+.licitapara-section .lp-signature>i{display:none!important}
+.licitapara-grid{
+  grid-template-columns:minmax(330px,.78fr) minmax(440px,1.12fr) minmax(220px,.56fr)!important;
+  gap:clamp(38px,5vw,72px)!important;
+}
+@media(max-width:920px){
+  .licitapara-grid{grid-template-columns:1fr!important}
+  .licitapara-section .lp-signature{width:min(100%,460px)!important}
+}
+@media(max-width:520px){
+  .licitapara-section .lp-signature{width:100%!important;padding:10px 12px!important}
+}
