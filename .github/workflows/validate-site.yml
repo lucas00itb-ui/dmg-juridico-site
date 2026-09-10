@@ -1,0 +1,22 @@
+name: Validar site institucional
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validar HTML e arquivos locais
+        run: python scripts/validate_site.py
+      - name: Validar JavaScript
+        run: |
+          for file in assets/js/*.js; do
+            node --check "$file"
+          done
