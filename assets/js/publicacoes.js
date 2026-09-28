@@ -5,6 +5,8 @@
   const template = document.querySelector("#publication-card-template");
   if (!list || !status || !template) return;
 
+  const staticCards = Array.from(list.querySelectorAll("[data-static-publication]"));
+
   const text = (node, value) => { node.textContent = value || ""; };
   const safeSource = (value) => {
     try {
@@ -22,9 +24,12 @@
   };
 
   const render = (items) => {
-    list.replaceChildren();
+    list.replaceChildren(...staticCards);
+    list.hidden = false;
     if (!items.length) {
-      status.textContent = "Nenhuma publicação está disponível no momento. Novos conteúdos aparecerão aqui depois da revisão da equipe DMG.";
+      status.classList.remove("is-error");
+      status.hidden = false;
+      status.textContent = "O guia de regularização fundiária já está disponível. Novas análises aparecerão aqui depois da revisão da equipe DMG.";
       return;
     }
     items.forEach((item) => {
@@ -50,6 +55,10 @@
         const image = media.querySelector("img");
         image.src = item.image_url;
         image.alt = "Imagem da publicação: " + title;
+        image.addEventListener("error", () => {
+          media.hidden = true;
+          image.removeAttribute("src");
+        }, {once:true});
         media.hidden = false;
       }
       card.dataset.publicationId = String(item.id || "");
@@ -69,7 +78,9 @@
     .then((data) => render(Array.isArray(data.publications) ? data.publications : []))
     .catch(() => {
       status.classList.add("is-error");
-      status.textContent = "Não foi possível carregar as publicações agora. Tente novamente em alguns instantes.";
+      status.hidden = false;
+      list.hidden = false;
+      status.textContent = "Não foi possível carregar as demais publicações agora. O guia abaixo continua disponível.";
     })
     .finally(() => clearTimeout(timeout));
 })();
