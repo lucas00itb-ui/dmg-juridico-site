@@ -22,10 +22,10 @@
   <meta name="twitter:image" content="https://dmgjuridico.com.br/assets/images/dmg-social-logo-texto-2026-09.png">
   <link rel="stylesheet" href="../assets/css/style.css?v=20260919-cache1">
   <link rel="stylesheet" href="../assets/css/refinements.css?v=20260919-cache1">
-  <link rel="stylesheet" href="../assets/css/publicacoes.css?v=20260928-reurb1">
+  <link rel="stylesheet" href="../assets/css/publicacoes.css?v=20260928-reurb2">
   <title>Publicações | DMG Advogados Associados</title>
   <script src="../assets/js/portal-link.js?v=20260919-cache1" defer></script>
-  <script src="../assets/js/publicacoes.js?v=20260919-cache1" defer></script>
+  <script src="../assets/js/publicacoes.js?v=20260928-reurb2" defer></script>
   <link rel="stylesheet" href="/assets/css/motion.css?v=20260919-cache1">
   <script src="/assets/js/carousels.js?v=20260919-cache1" defer></script>
   <link rel="stylesheet" href="/assets/css/alignment.css?v=20260919-cache1">
@@ -44,29 +44,6 @@
       </div>
     </section>
 
-    <section class="publications-feature" aria-labelledby="guia-regularizacao-title">
-      <div class="container publications-feature-grid">
-        <div class="guide-cover-mini" aria-hidden="true">
-          <span class="guide-cover-label">E-BOOK</span>
-          <strong>SEU TERRENO<br><em>ESTÁ REGULAR?</em></strong>
-          <p>Guia prático da regularização fundiária urbana municipal</p>
-          <span class="guide-cover-flow">POSSE → PREFEITURA → REGISTRO</span>
-        </div>
-        <div class="publications-feature-copy">
-          <p class="eyebrow">Guia gratuito</p>
-          <h2 id="guia-regularizacao-title">Regularização fundiária urbana: do diagnóstico ao registro.</h2>
-          <p>Um material didático para quem possui contrato, ocupa um imóvel urbano ou quer compreender quais documentos podem ser necessários e como funciona, em linhas gerais, o caminho administrativo e registral.</p>
-          <div class="publications-feature-tags" aria-label="Conteúdos do guia">
-            <span>Diagnóstico fundiário</span><span>Checklist documental</span><span>REURB</span><span>Prefeitura e Cartório</span>
-          </div>
-          <div class="publications-feature-actions">
-            <a class="button button-accent" href="./regularizacao-fundiaria/">Ver guia resumido</a>
-            <a class="button button-secondary" href="../assets/docs/ebook-regularizacao-fundiaria-urbana-municipal-dmg.pdf" download>Baixar e-book em PDF</a>
-          </div>
-          <p class="publications-feature-note">As exigências variam conforme o Município, a titularidade da área e o caso concreto.</p>
-        </div>
-      </div>
-    </section>
     <section class="publications-content" aria-labelledby="publicacoes-lista-title">
       <div class="container">
         <div class="publications-section-head">
@@ -74,7 +51,36 @@
           <p>As informações são gerais e não substituem a análise jurídica do caso concreto.</p>
         </div>
         <div class="publications-status" data-publications-status role="status">Carregando publicações revisadas…</div>
-        <div class="publications-grid" data-publications-list hidden></div>
+        <div class="publications-grid" data-publications-list>
+          <article class="publication-card publication-card--guide" data-static-publication>
+            <div class="publication-media publication-media--guide" aria-hidden="true">
+              <div class="guide-card-cover">
+                <span class="guide-card-label">E-BOOK</span>
+                <strong class="guide-card-title">SEU TERRENO<br><em>ESTÁ REGULAR?</em></strong>
+                <span class="guide-card-kicker">Guia prático da regularização fundiária urbana municipal</span>
+                <span class="guide-card-flow">POSSE → PREFEITURA → REGISTRO</span>
+              </div>
+            </div>
+            <div class="publication-card-body">
+              <div class="publication-meta">
+                <span>Guia gratuito</span>
+                <time datetime="2026-09-28">28 de setembro de 2026</time>
+              </div>
+              <h2>Regularização fundiária urbana: do diagnóstico ao registro.</h2>
+              <p class="publication-summary">Material didático para quem possui contrato, ocupa um imóvel urbano ou quer entender, em linhas gerais, os documentos e as etapas do caminho administrativo e registral.</p>
+              <div class="publication-guide-tags" aria-label="Conteúdos do guia">
+                <span>Diagnóstico fundiário</span>
+                <span>Checklist documental</span>
+                <span>REURB</span>
+                <span>Prefeitura e Cartório</span>
+              </div>
+              <div class="publication-card-actions">
+                <a class="publication-card-link" href="./regularizacao-fundiaria/">Ver guia resumido</a>
+                <a class="publication-card-link publication-card-link--secondary" href="../assets/docs/ebook-regularizacao-fundiaria-urbana-municipal-dmg.pdf" download>Baixar e-book em PDF</a>
+              </div>
+            </div>
+          </article>
+        </div>
         <template id="publication-card-template">
           <article class="publication-card">
             <div class="publication-media" data-publication-media hidden><img loading="lazy" decoding="async" alt=""></div>
